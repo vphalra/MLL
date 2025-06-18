@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// Removing unused imports
 import Hero from './components/Hero'
 import Industries from './components/Industries'
 import Footer from './components/Footer'
@@ -10,6 +9,7 @@ import Contact from './pages/Contact'
 import RequestServices from './pages/RequestServices'
 import Process from './pages/Process'
 import About from './pages/About'
+import { Menu, X } from 'lucide-react'
 
 function Home() {
   const location = useLocation();
@@ -31,19 +31,27 @@ function Home() {
         console.log("Scrolling to industries section");
         setTimeout(() => {
           if (industriesRef.current) {
-            industriesRef.current.scrollIntoView({ behavior: 'smooth' });
+            // Improved smooth scrolling with better options
+            industriesRef.current.scrollIntoView({ 
+              behavior: 'smooth', 
+              block: 'start',
+              inline: 'nearest'
+            });
             
             // If we also need to show a specific industry
             if (state.scrollToIndustry && typeof state.industryIndex === 'number') {
               console.log("Selecting industry:", state.industryIndex);
+              // Increased timeout to ensure scrolling completes before clicking
               setTimeout(() => {
                 const buttons = document.querySelectorAll('#industries-section .flex.justify-center.mt-8.space-x-2 button');
                 console.log("Found industry buttons:", buttons.length);
                 if (buttons && buttons[state.industryIndex]) {
                   console.log("Clicking button for industry:", state.industryIndex);
+                  // Add smooth transition for button click
+                  (buttons[state.industryIndex] as HTMLButtonElement).style.transition = 'all 0.3s ease';
                   (buttons[state.industryIndex] as HTMLButtonElement).click();
                 }
-              }, 800);
+              }, 1000); // Increased from 800ms to 1000ms for smoother experience
             }
           } else {
             console.log("Industries ref not found");
@@ -53,10 +61,7 @@ function Home() {
     }
   }, [location, initialRender]);
 
-  const handleScrollToIndustries = (e: React.MouseEvent) => {
-    e.preventDefault();
-    industriesRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
+  // Removing unused function
 
   return (
     <>
@@ -69,6 +74,12 @@ function Home() {
 }
 
 function App() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
   return (
     <Router>
       <div className="relative">
@@ -88,66 +99,143 @@ function App() {
 
         {/* Content */}
         <div className="relative z-10 min-h-screen flex flex-col">
-          <nav className='flex justify-between items-center p-4'>
-            <Link to="/" className='text-3xl font-bold text-white hover:underline'>MLL Service Inc.</Link>
-            <ul className='flex list-none'>
-              <li className='p-4'>
-                <Link to="/about" className="group text-white transition-all duration-300 ease-in-out hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)] hover:scale-110 transform inline-block">
+          {/* Fixed Navigation Bar with Glass Blur Effect */}
+          <nav className='fixed top-0 left-0 right-0 z-50 bg-black/10 backdrop-blur-md border border-white/10 shadow-lg transition-all duration-300 py-2 my-2 mx-2 sm:mx-4 rounded-lg'>            
+            <div className='w-full flex justify-between items-center px-3 sm:px-5 md:px-8 lg:px-12'>              
+              <Link to="/" className='flex items-center space-x-1 sm:space-x-2 group'>                
+                <div className="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 bg-white/10 backdrop-blur-sm rounded-md flex items-center justify-center shadow-md group-hover:bg-white/20 transition-all duration-300">                  
+                  <svg width="16" height="16" className="sm:w-[20px] sm:h-[20px] md:w-[24px] md:h-[24px]" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">                    
+                    <path d="M8 8L32 32" stroke="white" strokeWidth="2"/>                    
+                    <path d="M8 8H32V32H8V8Z" stroke="white" strokeWidth="2"/>                  
+                  </svg>                
+                </div>                
+                <span className='text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white truncate group-hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)] transition-all duration-300'>MLL Service Inc.</span>              
+              </Link>              
+              
+              {/* Mobile menu button */}
+              <button                 
+                className="md:hidden text-white p-2 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center shadow-md hover:bg-white/20 transition-all duration-300"                 
+                onClick={toggleMobileMenu}
+                aria-label="Toggle menu"
+              >
+                {mobileMenuOpen ? (                  
+                  <X className="h-5 w-5 sm:h-6 sm:w-6" />                
+                ) : (                  
+                  <Menu className="h-5 w-5 sm:h-6 sm:w-6" />                
+                )}
+              </button>
+
+              {/* Desktop Navigation */}
+              <ul className='hidden md:flex md:flex-wrap list-none space-x-1 sm:space-x-2 md:space-x-3 lg:space-x-6 xl:space-x-8 items-center justify-end'>
+                <li className='px-1 sm:px-1.5 md:px-2 py-2'>
+                  <Link to="/about" className="group text-white text-xs sm:text-sm lg:text-base transition-all duration-300 ease-in-out hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)] hover:scale-110 transform inline-block whitespace-nowrap">
+                    About
+                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
+                  </Link>
+                </li>
+                <li className='px-1 sm:px-1.5 md:px-2 py-2'>
+                  <Link
+                    to="/"
+                    state={{ scrollToIndustries: true }}
+                    className="group text-white text-xs sm:text-sm lg:text-base transition-all duration-300 ease-in-out hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)] hover:scale-110 transform inline-block whitespace-nowrap"
+                  >
+                    Industries
+                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
+                  </Link>
+                </li>
+                <li className='px-1 sm:px-1.5 md:px-2 py-2'>
+                  <Link to="/process" className="group text-white text-xs sm:text-sm lg:text-base transition-all duration-300 ease-in-out hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)] hover:scale-110 transform inline-block whitespace-nowrap">
+                    Process
+                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
+                  </Link>
+                </li>
+                <li className='px-1 sm:px-1.5 md:px-2 py-2'>
+                  <Link to="/contact" className="group text-white text-xs sm:text-sm lg:text-base transition-all duration-300 ease-in-out hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)] hover:scale-110 transform inline-block whitespace-nowrap">
+                    Contact
+                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
+                  </Link>
+                </li>
+                <li className='px-1 sm:px-1.5 md:px-2 py-2'>
+                  <Link to="/request-services" className="group text-white text-xs sm:text-sm lg:text-base transition-all duration-300 ease-in-out hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)] hover:scale-110 transform inline-block whitespace-nowrap">
+                    Request Services
+                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          {/* Mobile Navigation */}
+          <div 
+            className={`md:hidden bg-black/20 backdrop-blur-md py-4 sm:py-6 px-4 sm:px-6 rounded-lg mx-2 sm:mx-4 my-2 shadow-lg border border-white/10 transition-all duration-300 ease-in-out transform ${mobileMenuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'} fixed top-16 sm:top-20 left-0 right-0 z-40`}
+          >
+            <ul className='flex flex-col space-y-4'>
+              <li className="border-b border-white/10 pb-3">
+                <Link 
+                  to="/about" 
+                  className="text-white text-lg font-medium flex items-center hover:text-white/70 transition-colors duration-300"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
                   About
-                  <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
                 </Link>
               </li>
-              <li className='p-4'>
+              <li className="border-b border-white/10 pb-3">
                 <Link
                   to="/"
                   state={{ scrollToIndustries: true }}
-                  className="group text-white transition-all duration-300 ease-in-out hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)] hover:scale-110 transform inline-block"
+                  className="text-white text-lg font-medium flex items-center hover:text-white/70 transition-colors duration-300"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Industries
-                  <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
                 </Link>
               </li>
-              <li className='p-4'>
-                <Link to="/process" className="group text-white transition-all duration-300 ease-in-out hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)] hover:scale-110 transform inline-block">
+              <li className="border-b border-white/10 pb-3">
+                <Link 
+                  to="/process" 
+                  className="text-white text-lg font-medium flex items-center hover:text-white/70 transition-colors duration-300"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
                   Process
-                  <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
                 </Link>
               </li>
-              <li className='p-4'>
-                <Link to="/contact" className="group text-white transition-all duration-300 ease-in-out hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)] hover:scale-110 transform inline-block">
+              <li className="border-b border-white/10 pb-3">
+                <Link 
+                  to="/contact" 
+                  className="text-white text-lg font-medium flex items-center hover:text-white/70 transition-colors duration-300"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
                   Contact
-                  <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
                 </Link>
               </li>
-              <li className='p-4'>
-                <Link to="/request-services" className="group text-white transition-all duration-300 ease-in-out hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)] hover:scale-110 transform inline-block">
+              <li>
+                <Link 
+                  to="/request-services" 
+                  className="text-white text-lg font-medium flex items-center hover:text-white/70 transition-colors duration-300"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
                   Request Services
-                  <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
                 </Link>
               </li>
             </ul>
-          </nav>
-          <div className="flex-1">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/request-services" element={<RequestServices />} />
-              <Route path="/process" element={<Process />} />
-            </Routes>
           </div>
-          <Footer />
+
+          {/* Add padding to account for fixed navbar */}
+          <div className="pt-20">
+            <div className="flex-1">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/request-services" element={<RequestServices />} />
+                <Route path="/process" element={<Process />} />
+              </Routes>
+            </div>
+            <Footer />
+          </div>
         </div>
       </div>
     </Router>
   )
 }
-
-/* Add custom styles to index.css */
-/* @layer utilities {
-  .text-shadow-glow {
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7), 0 0 12px rgba(255, 255, 255, 0.5);
-  }
-} */
 
 export default App

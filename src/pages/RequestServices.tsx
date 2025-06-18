@@ -1,4 +1,4 @@
-import React from 'react';
+// Removed React import
 
 const industries = [
   'Manufacturing',
@@ -85,4 +85,4 @@ const RequestServices = () => {
   );
 };
 
-export default RequestServices; 
+export default RequestServices;

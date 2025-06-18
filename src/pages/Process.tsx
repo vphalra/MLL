@@ -36,37 +36,37 @@ const chartData = {
 
 const Process = () => {
   return (
-    <div className="min-h-screen bg-[#2C2A28] flex flex-col items-center py-16 px-2">
-      <h1 className="text-4xl font-bold text-white text-center mb-2">Our Process</h1>
-      <p className="text-gray-200 text-center mb-12 max-w-2xl">
+    <div className="min-h-screen bg-[#2C2A28] flex flex-col items-center py-10 md:py-16 px-4 md:px-6">
+      <h1 className="text-3xl md:text-4xl font-bold text-white text-center mb-2">Our Process</h1>
+      <p className="text-gray-200 text-center text-sm md:text-base mb-8 md:mb-12 max-w-2xl">
         A streamlined approach to providing professional labor solutions for your business needs.
       </p>
-      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-4 gap-6 mb-20">
+      <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-10 md:mb-20">
         {processSteps.map((step) => (
-          <div key={step.number} className="rounded-2xl bg-[#23211f] p-8 flex flex-col items-center shadow-lg text-center">
-            <div className="mb-4 flex items-center justify-center w-12 h-12 rounded-full bg-[#181715]">
-              {React.createElement(step.icon, { className: 'h-7 w-7 text-white' })}
+          <div key={step.number} className="rounded-2xl bg-[#23211f] p-6 md:p-8 flex flex-col items-center shadow-lg text-center">
+            <div className="mb-3 md:mb-4 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#181715]">
+              {React.createElement(step.icon, { className: 'h-5 w-5 md:h-7 md:w-7 text-white' })}
             </div>
-            <div className="text-2xl text-white font-bold mb-2">{step.number}</div>
-            <div className="text-lg text-white font-semibold mb-2">{step.title}</div>
-            <div className="text-gray-200 text-sm">{step.description}</div>
+            <div className="text-xl md:text-2xl text-white font-bold mb-1 md:mb-2">{step.number}</div>
+            <div className="text-base md:text-lg text-white font-semibold mb-1 md:mb-2">{step.title}</div>
+            <div className="text-gray-200 text-xs md:text-sm">{step.description}</div>
           </div>
         ))}
       </div>
-      <div className="w-full bg-[#23211f] py-16 px-4 rounded-2xl max-w-6xl mx-auto mt-8">
-        <h2 className="text-3xl font-bold text-white text-center mb-2">Performance Metrics</h2>
-        <p className="text-gray-200 text-center mb-10 max-w-2xl mx-auto">
+      <div className="w-full bg-[#23211f] py-8 md:py-16 px-4 rounded-2xl max-w-6xl mx-auto mt-6 md:mt-8">
+        <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-2">Performance Metrics</h2>
+        <p className="text-gray-200 text-center text-sm md:text-base mb-6 md:mb-10 max-w-2xl mx-auto">
           Our commitment to excellence is reflected in our consistently high performance metrics.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           {/* Efficiency & Satisfaction Rates Chart */}
-          <div className="bg-[#181715] rounded-xl p-6">
-            <div className="text-white font-semibold mb-4">Efficiency & Satisfaction Rates</div>
+          <div className="bg-[#181715] rounded-xl p-4 md:p-6">
+            <div className="text-white font-semibold text-sm md:text-base mb-3 md:mb-4">Efficiency & Satisfaction Rates</div>
             <Chart labels={chartData.labels} data={chartData.efficiency} />
           </div>
           {/* Worker Retention Rate Chart */}
-          <div className="bg-[#181715] rounded-xl p-6">
-            <div className="text-white font-semibold mb-4">Worker Retention Rate</div>
+          <div className="bg-[#181715] rounded-xl p-4 md:p-6">
+            <div className="text-white font-semibold text-sm md:text-base mb-3 md:mb-4">Worker Retention Rate</div>
             <Chart labels={chartData.labels} data={chartData.retention} />
           </div>
         </div>
@@ -107,15 +107,15 @@ const Chart = ({ labels, data }: { labels: string[]; data: number[] }) => {
       {/* Labels */}
       {labels.map((label, i) => {
         const x = (i / (labels.length - 1)) * (width - 40) + 30;
-        return <text key={label} x={x} y={height - 10} textAnchor="middle" fontSize={12} fill="#888">{label}</text>;
+        return <text key={label} x={x} y={height - 10} textAnchor="middle" fontSize={10} fill="#888">{label}</text>;
       })}
       {/* Y-axis labels */}
       {[0, 25, 50, 75, 100].map((v) => {
         const y = height - 30 - ((v - min) / (max - min)) * (height - 60);
-        return <text key={v} x={10} y={y + 4} fontSize={12} fill="#888">{v}</text>;
+        return <text key={v} x={10} y={y + 4} fontSize={10} fill="#888">{v}</text>;
       })}
     </svg>
   );
 };
 
-export default Process; 
+export default Process;

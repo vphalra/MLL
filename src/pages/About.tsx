@@ -50,7 +50,7 @@ const About = () => {
             At MLL Service Inc., we understand that every industry has unique challenges and requirements. Our commitment to excellence drives us to provide specialized labor solutions that help businesses thrive in today's competitive landscape.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {features.map((feature, idx) => (
+            {features.map((feature) => (
               <div key={feature.title} className="rounded-2xl bg-[#23211f] p-6 flex flex-col shadow-lg">
                 <div className="flex items-center mb-3">
                   {React.createElement(feature.icon, { className: 'h-6 w-6 text-white mr-3' })}
@@ -68,4 +68,4 @@ const About = () => {
   );
 };
 
-export default About; 
+export default About;
