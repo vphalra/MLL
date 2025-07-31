@@ -1,5 +1,5 @@
 import React from 'react';
-import { ClipboardList, Users, Briefcase, BarChart2, Search, Handshake, CheckCircle } from 'lucide-react';
+import { BarChart2, Search, Handshake, CheckCircle } from 'lucide-react';
 
 const processSteps = [
   {
