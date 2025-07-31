@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="relative overflow-hidden bg-black/80">
       <div className="container mx-auto max-w-7xl px-4 py-8 md:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-4 md:mb-6">
@@ -49,58 +49,6 @@ const Footer = () => {
                   className="text-gray-200 hover:text-white transition-colors duration-300 text-xs md:text-sm font-light"
                 >
                   Industries
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Industries */}
-          <div className="mt-6 lg:mt-0">
-            <h3 className="text-white font-light text-base md:text-lg mb-4 md:mb-6">Industries</h3>
-            <ul className="space-y-2 md:space-y-3">
-              <li>
-                <Link
-                  to="/"
-                  state={{ scrollToIndustry: true, industryIndex: 0 }}
-                  className="text-gray-200 hover:text-white transition-colors duration-300 text-xs md:text-sm font-light"
-                >
-                  Manufacturing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  state={{ scrollToIndustry: true, industryIndex: 1 }}
-                  className="text-gray-200 hover:text-white transition-colors duration-300 text-xs md:text-sm font-light"
-                >
-                  Agriculture
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  state={{ scrollToIndustry: true, industryIndex: 2 }}
-                  className="text-gray-200 hover:text-white transition-colors duration-300 text-xs md:text-sm font-light"
-                >
-                  Textile
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  state={{ scrollToIndustry: true, industryIndex: 3 }}
-                  className="text-gray-200 hover:text-white transition-colors duration-300 text-xs md:text-sm font-light"
-                >
-                  Chemical
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  state={{ scrollToIndustry: true, industryIndex: 4 }}
-                  className="text-gray-200 hover:text-white transition-colors duration-300 text-xs md:text-sm font-light"
-                >
-                  Construction
                 </Link>
               </li>
             </ul>
