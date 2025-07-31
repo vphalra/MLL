@@ -25,9 +25,8 @@ const Contact = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 md:h-5 md:w-5 text-white mt-1" />
                 <span className="text-gray-200 text-xs md:text-sm font-light">
-                  123 Business Street<br />
-                  Suite 100<br />
-                  New York, NY 10001
+                  16 Linwood Street<br />
+                  Lowell, MA 01851
                 </span>
               </div>
               <div className="flex items-center space-x-3">
@@ -36,7 +35,7 @@ const Contact = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 md:h-5 md:w-5 text-white" />
-                <span className="text-gray-200 text-xs md:text-sm font-light">contact@mllservice.com</span>
+                <span className="text-gray-200 text-xs md:text-sm font-light">mllservicesinc@outlook.com</span>
               </div>
             </div>
           </div>
@@ -45,7 +44,7 @@ const Contact = () => {
             <div className="overflow-hidden rounded-xl">
               <iframe
                 title="Google Map"
-                src="https://www.google.com/maps?q=New+York,+NY,+USA&output=embed"
+                src="https://www.google.com/maps?q=16+Linwood+Street,+Lowell,+MA+01851&output=embed"
                 width="100%"
                 height="200"
                 style={{ border: 0 }}

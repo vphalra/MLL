@@ -112,7 +112,7 @@ const Footer = () => {
             <ul className="space-y-3 md:space-y-4">
               <li className="flex items-start space-x-3">
                 <Mail className="h-4 w-4 md:h-5 md:w-5 text-white mt-1" />
-                <span className="text-gray-200 text-xs md:text-sm font-light">contact@mllservice.com</span>
+                <span className="text-gray-200 text-xs md:text-sm font-light">mllservicesinc@outlook.com</span>
               </li>
               <li className="flex items-start space-x-3">
                 <Phone className="h-4 w-4 md:h-5 md:w-5 text-white" />
@@ -121,9 +121,8 @@ const Footer = () => {
               <li className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 md:h-5 md:w-5 text-white mt-1" />
                 <span className="text-gray-200 text-xs md:text-sm font-light">
-                  123 Business Street<br />
-                  Suite 100<br />
-                  New York, NY 10001
+                  16 Linwood Street<br />
+                  Lowell, MA 01851
                 </span>
               </li>
             </ul>

@@ -9,7 +9,27 @@ import Contact from './pages/Contact'
 import RequestServices from './pages/RequestServices'
 import Process from './pages/Process'
 import About from './pages/About'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Clock, DollarSign, Briefcase, TrendingUp } from 'lucide-react'
+
+// Benefits data for home page
+const timeBenefits = [
+  'Payroll Management',
+  'Talent Acquisition',
+  'Turnover Rate Replacement'
+];
+
+const moneySavings = [
+  'Workers\' Compensation Insurance',
+  'Taxes',
+  'Employee Benefits'
+];
+
+const serviceTypes = [
+  'Temporary Staffing',
+  'Seasonal Work',
+  'Project-Based',
+  'Homework Solutions'
+];
 
 function Home() {
   const location = useLocation();
@@ -68,6 +88,90 @@ function Home() {
       <Hero />
       <div ref={industriesRef} id="industries-section">
         <Industries />
+      </div>
+      
+      {/* Divider Section */}
+      <div className="bg-[#2C2A28] py-12">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex items-center justify-center">
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-500 to-transparent"></div>
+            <div className="mx-8">
+              <div className="w-3 h-3 bg-white rounded-full"></div>
+            </div>
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-500 to-transparent"></div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Benefits Section */}
+      <div className="bg-[#2C2A28] py-16 px-4">
+        <div className="w-full max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-4">Benefits of Our Service</h2>
+          <p className="text-gray-200 text-center mb-12 max-w-3xl mx-auto">
+            Here are the key benefits when choosing our services, designed to save you both time and money while providing comprehensive staffing solutions.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Time Savings */}
+            <div className="bg-[#23211f] rounded-2xl p-8 shadow-lg">
+              <div className="flex items-center mb-6">
+                <Clock className="h-8 w-8 text-white mr-3" />
+                <h3 className="text-xl font-semibold text-white">Time Saved</h3>
+              </div>
+              <ul className="space-y-3">
+                {timeBenefits.map((benefit, index) => (
+                  <li key={index} className="text-gray-200 flex items-center">
+                    <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Money Savings */}
+            <div className="bg-[#23211f] rounded-2xl p-8 shadow-lg">
+              <div className="flex items-center mb-6">
+                <DollarSign className="h-8 w-8 text-white mr-3" />
+                <h3 className="text-xl font-semibold text-white">Money Saved</h3>
+              </div>
+              <ul className="space-y-3">
+                {moneySavings.map((saving, index) => (
+                  <li key={index} className="text-gray-200 flex items-center">
+                    <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
+                    {saving}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Service Types */}
+            <div className="bg-[#23211f] rounded-2xl p-8 shadow-lg">
+              <div className="flex items-center mb-6">
+                <Briefcase className="h-8 w-8 text-white mr-3" />
+                <h3 className="text-xl font-semibold text-white">Our Services</h3>
+              </div>
+              <ul className="space-y-3">
+                {serviceTypes.map((service, index) => (
+                  <li key={index} className="text-gray-200 flex items-center">
+                    <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
+                    {service}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Competitive Edge */}
+          <div className="bg-[#23211f] rounded-2xl p-8 shadow-lg mt-8">
+            <div className="flex items-center mb-6">
+              <TrendingUp className="h-8 w-8 text-white mr-3" />
+              <h3 className="text-2xl font-semibold text-white">Our Competitive Edge</h3>
+            </div>
+            <p className="text-gray-200 text-lg leading-relaxed">
+              Our competitive edge over other agencies is the capability to accommodate our clients with high volume when they need it most and the flexibility to reduce it when needed less, depending on client production quotas.
+            </p>
+          </div>
+        </div>
       </div>
     </>
   )
@@ -155,12 +259,6 @@ function App() {
                     <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
                   </Link>
                 </li>
-                <li className='px-1 sm:px-1.5 md:px-2 py-2'>
-                  <Link to="/request-services" className="group text-white text-xs sm:text-sm lg:text-base transition-all duration-300 ease-in-out hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)] hover:scale-110 transform inline-block whitespace-nowrap">
-                    Request Services
-                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
-                  </Link>
-                </li>
               </ul>
             </div>
           </nav>
@@ -198,22 +296,13 @@ function App() {
                   Process
                 </Link>
               </li>
-              <li className="border-b border-white/10 pb-3">
+              <li>
                 <Link 
                   to="/contact" 
                   className="text-white text-lg font-medium flex items-center hover:text-white/70 transition-colors duration-300"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Contact
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/request-services" 
-                  className="text-white text-lg font-medium flex items-center hover:text-white/70 transition-colors duration-300"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Request Services
                 </Link>
               </li>
             </ul>
@@ -226,7 +315,6 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/request-services" element={<RequestServices />} />
                 <Route path="/process" element={<Process />} />
               </Routes>
             </div>

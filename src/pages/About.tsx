@@ -1,28 +1,23 @@
 import React from 'react';
-import { ShieldCheck, Users, Target, Award } from 'lucide-react';
+import { ShieldCheck, Users, Target } from 'lucide-react';
 import mllphoto from '../assets/mll-photo.avif';
 
 const features = [
   {
     icon: ShieldCheck,
-    title: 'Quality Assurance',
-    description: 'Rigorous screening and training processes ensure our workforce meets the highest industry standards.'
+    title: 'Deep Industry Analysis',
+    description: 'We take a deep dive into the nature of our client\'s industry, understanding production, operations, and goals to identify where efficiency can be improved.'
   },
   {
     icon: Users,
-    title: 'Skilled Workforce',
-    description: 'Our team comprises experienced professionals across various industrial sectors.'
+    title: 'Strategic Resource Recruitment',
+    description: 'We recruit the right resources and provide manual attention required to produce potential efficiency permanently.'
   },
   {
     icon: Target,
-    title: 'Custom Solutions',
-    description: 'Tailored labor solutions designed to meet your specific industry requirements.'
-  },
-  {
-    icon: Award,
-    title: 'Industry Leadership',
-    description: 'Recognized excellence in providing professional labor services since 2008.'
-  },
+    title: 'Permanent Efficiency Solutions',
+    description: 'Our mission is to serve clients with permanent efficiency through tailored solutions that address specific production challenges.'
+  }
 ];
 
 const About = () => {
@@ -31,25 +26,23 @@ const About = () => {
       <h1 className="text-4xl font-bold text-white text-center mb-2">About MLL Service Inc.</h1>
       <div className="w-full flex flex-col items-center">
         <p className="text-gray-200 text-center mb-12 max-w-2xl">
-          Since 2008, we've been at the forefront of professional labor services, connecting skilled workers with industry-leading companies across multiple sectors.
+          Our mission is to serve and provide our clients with permanent efficiency by taking a deep dive into the nature of our client's industry. We identify where production is lacking, recruit the right resources, and provide the necessary attention required to maximize our clients' return on their investment.
         </p>
       </div>
+      
       <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-        {/* Left: Image */}
+        {/* Left: Larger Image */}
         <div className="flex justify-center">
           <img
             src={mllphoto}
             alt="MLL Service Inc."
-            className="rounded-2xl object-cover w-full max-w-md shadow-lg"
+            className="rounded-2xl object-cover w-full h-96 shadow-lg"
           />
         </div>
-        {/* Right: Text and Features */}
+        {/* Right: Features Only */}
         <div>
-          <h2 className="text-2xl font-semibold text-white mb-4">Excellence in Labor Solutions</h2>
-          <p className="text-gray-200 mb-8">
-            At MLL Service Inc., we understand that every industry has unique challenges and requirements. Our commitment to excellence drives us to provide specialized labor solutions that help businesses thrive in today's competitive landscape.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <h2 className="text-2xl font-semibold text-white mb-8">Excellence in Labor Solutions</h2>
+          <div className="grid grid-cols-1 gap-6">
             {features.map((feature) => (
               <div key={feature.title} className="rounded-2xl bg-[#23211f] p-6 flex flex-col shadow-lg">
                 <div className="flex items-center mb-3">
