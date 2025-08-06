@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react
 import Hero from './components/Hero'
 import Industries from './components/Industries'
 import Footer from './components/Footer'
+import IndustriesCarousel from './components/IndustriesCarousel'
 import manufacturingVideo from './assets/manufacturing.mp4'
 import Contact from './pages/Contact'
 import Process from './pages/Process'
@@ -89,89 +90,93 @@ function Home() {
         <Industries />
       </div>
       
-      {/* Divider Section */}
-      <div className="bg-[#2C2A28] py-12">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex items-center justify-center">
-            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-500 to-transparent"></div>
-            <div className="mx-8">
-              <div className="w-3 h-3 bg-white rounded-full"></div>
+      {/* Temporary Staffing Section */}
+      <div className="bg-[#2C2A28] lg:min-h-screen lg:flex lg:items-center">
+        <div className="w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 lg:min-h-screen lg:h-screen">
+            {/* Left: Image */}
+            <div className="relative overflow-hidden aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-full">
+              <img
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2084&q=80"
+                alt="We Make Staffing Simple."
+                className="w-full h-full object-cover object-center"
+              />
             </div>
-            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-500 to-transparent"></div>
+            
+            {/* Right: Content */}
+            <div className="text-white flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-16 py-6 sm:py-8 lg:py-0 -mt-2 lg:mt-0">
+              <div className="max-w-lg">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight">
+                  Temporary Staffing
+                </h2>
+                <p className="text-sm sm:text-base md:text-lg mb-5 sm:mb-6 md:mb-8 leading-relaxed opacity-90">
+                  Whether you need temporary workers for seasonal demands, special projects, or extended absences, we have the people you've been looking for — pre-screened, trained, and ready to get to work. Discover why we were named the #1 temporary staffing agency in the U.S. by Forbes.
+                </p>
+                <button className="bg-white text-[#2C2A28] font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg hover:bg-gray-100 transition-colors duration-300 text-sm md:text-base">
+                  STAFFING SOLUTIONS
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      
-      {/* Benefits Section */}
-      <div className="bg-[#2C2A28] py-16 px-4">
-        <div className="w-full max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-4">Benefits of Our Service</h2>
-          <p className="text-gray-200 text-center mb-12 max-w-3xl mx-auto">
-            Here are the key benefits when choosing our services, designed to save you both time and money while providing comprehensive staffing solutions.
-          </p>
+
+      {/* On-site Workforce Management Section */}
+      <div className="bg-white lg:min-h-screen lg:flex lg:items-center">
+        <div className="w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 lg:min-h-screen lg:h-screen">
+            {/* Left: Content */}
+            <div className="text-[#2C2A28] flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-16 py-6 sm:py-8 lg:py-0 order-2 lg:order-1 -mt-2 lg:mt-0">
+              <div className="max-w-lg">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight">
+                  On-site Workforce Management
+                </h2>
+                <p className="text-sm sm:text-base md:text-lg mb-5 sm:mb-6 md:mb-8 leading-relaxed opacity-90">
+                  Looking to minimize daily challenges related to recruiting, onboarding, retention, and scheduling? As an on-site workforce partner, Kelly helps organizations offload hiring and team management tasks associated with a high-volume, temporary workforce.
+                </p>
+                <button className="bg-green-600 text-white font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg hover:bg-green-700 transition-colors duration-300 text-sm md:text-base">
+                  ON-SITE SOLUTIONS
+                </button>
+              </div>
+            </div>
+            
+            {/* Right: Image */}
+            <div className="relative overflow-hidden aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-full order-1 lg:order-2">
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2088&q=80"
+                alt="On-site workforce management professionals"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Industries We Serve Section */}
+      <div className="bg-white py-12 md:py-20">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+          <div className="text-center mb-8 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#2C2A28] mb-4 md:mb-8">
+              Fluent in your fields and industries.
+            </h2>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Time Savings */}
-            <div className="bg-[#23211f] rounded-2xl p-8 shadow-lg">
-              <div className="flex items-center mb-6">
-                <Clock className="h-8 w-8 text-white mr-3" />
-                <h3 className="text-xl font-semibold text-white">Time Saved</h3>
-              </div>
-              <ul className="space-y-3">
-                {timeBenefits.map((benefit, index) => (
-                  <li key={index} className="text-gray-200 flex items-center">
-                    <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                    {benefit}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Money Savings */}
-            <div className="bg-[#23211f] rounded-2xl p-8 shadow-lg">
-              <div className="flex items-center mb-6">
-                <DollarSign className="h-8 w-8 text-white mr-3" />
-                <h3 className="text-xl font-semibold text-white">Money Saved</h3>
-              </div>
-              <ul className="space-y-3">
-                {moneySavings.map((saving, index) => (
-                  <li key={index} className="text-gray-200 flex items-center">
-                    <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                    {saving}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Service Types */}
-            <div className="bg-[#23211f] rounded-2xl p-8 shadow-lg">
-              <div className="flex items-center mb-6">
-                <Briefcase className="h-8 w-8 text-white mr-3" />
-                <h3 className="text-xl font-semibold text-white">Our Services</h3>
-              </div>
-              <ul className="space-y-3">
-                {serviceTypes.map((service, index) => (
-                  <li key={index} className="text-gray-200 flex items-center">
-                    <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                    {service}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Competitive Edge */}
-          <div className="bg-[#23211f] rounded-2xl p-8 shadow-lg mt-8">
-            <div className="flex items-center mb-6">
-              <TrendingUp className="h-8 w-8 text-white mr-3" />
-              <h3 className="text-2xl font-semibold text-white">Our Competitive Edge</h3>
-            </div>
-            <p className="text-gray-200 text-lg leading-relaxed">
-              Our competitive edge over other agencies is the capability to accommodate our clients with high volume when they need it most and the flexibility to reduce it when needed less, depending on client production quotas.
-            </p>
-          </div>
+          <IndustriesCarousel />
         </div>
       </div>
+
+      {/* Call to Action Section */}
+      <div className="bg-[#2C2A28] py-12 md:py-16">
+        <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 md:px-8 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6 font-sans">
+            Ready to find the perfect workforce solution?
+          </h2>
+          <button className="bg-white text-[#2C2A28] font-semibold px-6 md:px-8 py-3 md:py-4 rounded-lg hover:bg-gray-100 transition-colors duration-300 text-base md:text-lg font-sans">
+            CONTACT US
+          </button>
+        </div>
+      </div>
+
     </>
   )
 }
@@ -203,7 +208,7 @@ function App() {
         {/* Content */}
         <div className="relative z-10 min-h-screen flex flex-col">
           {/* Fixed Navigation Bar with Glass Blur Effect */}
-          <nav className='fixed top-0 left-0 right-0 z-50 bg-black/10 backdrop-blur-md border border-white/10 shadow-lg transition-all duration-300 py-2 my-2 mx-2 sm:mx-4 rounded-lg'>            
+          <nav className='fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-lg border border-white/20 shadow-lg transition-all duration-300 py-2 my-2 mx-2 sm:mx-4 rounded-lg'>            
             <div className='w-full flex justify-between items-center px-3 sm:px-5 md:px-8 lg:px-12'>              
               <Link to="/" className='flex items-center space-x-1 sm:space-x-2 group'>                
                 <div className="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 bg-white/10 backdrop-blur-sm rounded-md flex items-center justify-center shadow-md group-hover:bg-white/20 transition-all duration-300">                  
@@ -248,7 +253,7 @@ function App() {
                 </li>
                 <li className='px-1 sm:px-1.5 md:px-2 py-2'>
                   <Link to="/process" className="group text-white text-xs sm:text-sm lg:text-base transition-all duration-300 ease-in-out hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)] hover:scale-110 transform inline-block whitespace-nowrap">
-                    Process
+                    Working with MLL
                     <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
                   </Link>
                 </li>
@@ -292,7 +297,7 @@ function App() {
                   className="text-white text-lg font-medium flex items-center hover:text-white/70 transition-colors duration-300"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Process
+                  Working with MLL
                 </Link>
               </li>
               <li>

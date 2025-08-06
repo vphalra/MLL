@@ -11,7 +11,7 @@ const industries = [
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-[#2C2A28] flex flex-col items-center py-10 md:py-16 px-4 md:px-6">
+    <div className="min-h-screen bg-gradient-to-br from-[#2C2A28]/80 via-[#23211f]/60 to-[#181715]/80 backdrop-blur-sm flex flex-col items-center pt-20 md:pt-24 pb-10 md:pb-16 px-4 md:px-6">
       <h1 className="text-3xl md:text-4xl font-bold text-white text-center mb-2">Contact Us</h1>
       <p className="text-gray-200 text-center text-sm md:text-base mb-8 md:mb-12 max-w-2xl">
         Get in touch with our team for any inquiries or support. We're here to help you find the perfect labor solution for your business.
@@ -19,7 +19,7 @@ const Contact = () => {
       <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
         {/* Left: Office Info and Map */}
         <div className="space-y-6 md:space-y-8">
-          <div className="rounded-2xl bg-[#23211f] p-6 md:p-8 shadow-lg">
+          <div className="rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 p-6 md:p-8 shadow-lg">
             <h2 className="text-lg md:text-xl font-semibold text-white mb-4 md:mb-6">Our Office</h2>
             <div className="space-y-3 md:space-y-4">
               <div className="flex items-start space-x-3">
@@ -39,7 +39,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="rounded-2xl bg-[#23211f] p-4 md:p-6 shadow-lg">
+          <div className="rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 p-4 md:p-6 shadow-lg">
             <h2 className="text-lg md:text-xl font-semibold text-white mb-3 md:mb-4">Location</h2>
             <div className="overflow-hidden rounded-xl">
               <iframe
@@ -56,7 +56,7 @@ const Contact = () => {
           </div>
         </div>
         {/* Right: Contact Form */}
-        <div className="rounded-2xl bg-[#23211f] p-6 md:p-8 shadow-lg">
+        <div className="rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 p-6 md:p-8 shadow-lg">
           <h2 className="text-lg md:text-xl font-semibold text-white mb-4 md:mb-6">Send Us a Message</h2>
           <form className="space-y-4 md:space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
