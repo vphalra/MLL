@@ -2,13 +2,14 @@ import { useState, useRef, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
 // Removing unused imports
 import Hero from './components/Hero'
-import Industries from './components/Industries'
+import IndustriesComponent from './components/Industries'
 import Footer from './components/Footer'
 import IndustriesCarousel from './components/IndustriesCarousel'
 import manufacturingVideo from './assets/manufacturing.mp4'
 import Contact from './pages/Contact'
 import Process from './pages/Process'
 import About from './pages/About'
+import Industries from './pages/Industries'
 import { Menu, X } from 'lucide-react'
 
 function Home() {
@@ -67,7 +68,7 @@ function Home() {
     <>
       <Hero />
       <div ref={industriesRef} id="industries-section">
-        <Industries />
+        <IndustriesComponent />
       </div>
       
       {/* Temporary Staffing Section */}
@@ -170,25 +171,35 @@ function App() {
 
   return (
     <Router>
-      <div className="relative">
-        {/* Video Background */}
-        <div className="fixed top-0 left-0 w-full h-screen -z-10">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover"
-          >
-            <source src={manufacturingVideo} type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-black/50"></div>
-        </div>
+      <AppContent mobileMenuOpen={mobileMenuOpen} toggleMobileMenu={toggleMobileMenu} setMobileMenuOpen={setMobileMenuOpen} />
+    </Router>
+  )
+}
 
-        {/* Content */}
-        <div className="relative z-10 min-h-screen flex flex-col">
+function AppContent({ mobileMenuOpen, toggleMobileMenu, setMobileMenuOpen }: { mobileMenuOpen: boolean, toggleMobileMenu: () => void, setMobileMenuOpen: (open: boolean) => void }) {
+  const location = useLocation();
+  const showVideoBackground = location.pathname === '/' || location.pathname === '/contact';
+
+  return (
+    <div className="relative">
+      {/* Video Background - only on home page */}
+      <div className={`fixed top-0 left-0 w-full h-screen -z-10 ${showVideoBackground ? 'block' : 'hidden'}`}>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src={manufacturingVideo} type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/50"></div>
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 min-h-screen flex flex-col">
           {/* Fixed Navigation Bar with Glass Blur Effect */}
-          <nav className='fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-lg border border-white/20 shadow-lg transition-all duration-300 py-2 my-2 mx-2 sm:mx-4 rounded-lg'>            
+          <nav className='fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-lg border border-white/30 shadow-xl transition-all duration-300 py-2 my-2 mx-2 sm:mx-4 rounded-lg'>            
             <div className='w-full flex justify-between items-center px-3 sm:px-5 md:px-8 lg:px-12'>              
               <Link to="/" className='flex items-center space-x-1 sm:space-x-2 group'>                
                 <div className="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 bg-white/10 backdrop-blur-sm rounded-md flex items-center justify-center shadow-md group-hover:bg-white/20 transition-all duration-300">                  
@@ -222,11 +233,7 @@ function App() {
                   </Link>
                 </li>
                 <li className='px-1 sm:px-1.5 md:px-2 py-2'>
-                  <Link
-                    to="/"
-                    state={{ scrollToIndustries: true }}
-                    className="group text-white text-xs sm:text-sm lg:text-base transition-all duration-300 ease-in-out hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)] hover:scale-110 transform inline-block whitespace-nowrap"
-                  >
+                  <Link to="/industries" className="group text-white text-xs sm:text-sm lg:text-base transition-all duration-300 ease-in-out hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)] hover:scale-110 transform inline-block whitespace-nowrap">
                     Industries
                     <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
                   </Link>
@@ -249,7 +256,7 @@ function App() {
 
           {/* Mobile Navigation */}
           <div 
-            className={`md:hidden bg-black/20 backdrop-blur-md py-4 sm:py-6 px-4 sm:px-6 rounded-lg mx-2 sm:mx-4 my-2 shadow-lg border border-white/10 transition-all duration-300 ease-in-out transform ${mobileMenuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'} fixed top-16 sm:top-20 left-0 right-0 z-40`}
+            className={`md:hidden bg-black/80 backdrop-blur-md py-4 sm:py-6 px-4 sm:px-6 rounded-lg mx-2 sm:mx-4 my-2 shadow-xl border border-white/30 transition-all duration-300 ease-in-out transform ${mobileMenuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'} fixed top-16 sm:top-20 left-0 right-0 z-40`}
           >
             <ul className='flex flex-col space-y-4'>
               <li className="border-b border-white/10 pb-3">
@@ -263,8 +270,7 @@ function App() {
               </li>
               <li className="border-b border-white/10 pb-3">
                 <Link
-                  to="/"
-                  state={{ scrollToIndustries: true }}
+                  to="/industries"
                   className="text-white text-lg font-medium flex items-center hover:text-white/70 transition-colors duration-300"
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -298,6 +304,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/industries" element={<Industries />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/process" element={<Process />} />
               </Routes>
@@ -306,7 +313,6 @@ function App() {
           </div>
         </div>
       </div>
-    </Router>
   )
 }
 

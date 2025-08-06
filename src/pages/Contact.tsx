@@ -11,7 +11,11 @@ const industries = [
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#2C2A28]/80 via-[#23211f]/60 to-[#181715]/80 backdrop-blur-sm flex flex-col items-center pt-20 md:pt-24 pb-10 md:pb-16 px-4 md:px-6">
+    <>
+      {/* Background overlay that extends behind nav bar */}
+      <div className="fixed top-0 left-0 w-full h-screen bg-gradient-to-br from-[#2C2A28]/80 via-[#23211f]/60 to-[#181715]/80 backdrop-blur-sm -z-20"></div>
+      
+      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center pt-12 pb-28 px-4 md:px-6">
       <h1 className="text-3xl md:text-4xl font-bold text-white text-center mb-2">Contact Us</h1>
       <p className="text-gray-200 text-center text-sm md:text-base mb-8 md:mb-12 max-w-2xl">
         Get in touch with our team for any inquiries or support. We're here to help you find the perfect labor solution for your business.
@@ -98,7 +102,8 @@ const Contact = () => {
           </form>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 
