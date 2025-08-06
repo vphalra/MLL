@@ -9,27 +9,7 @@ import manufacturingVideo from './assets/manufacturing.mp4'
 import Contact from './pages/Contact'
 import Process from './pages/Process'
 import About from './pages/About'
-import { Menu, X, Clock, DollarSign, Briefcase, TrendingUp } from 'lucide-react'
-
-// Benefits data for home page
-const timeBenefits = [
-  'Payroll Management',
-  'Talent Acquisition',
-  'Turnover Rate Replacement'
-];
-
-const moneySavings = [
-  'Workers\' Compensation Insurance',
-  'Taxes',
-  'Employee Benefits'
-];
-
-const serviceTypes = [
-  'Temporary Staffing',
-  'Seasonal Work',
-  'Project-Based',
-  'Homework Solutions'
-];
+import { Menu, X } from 'lucide-react'
 
 function Home() {
   const location = useLocation();
@@ -98,7 +78,7 @@ function Home() {
             <div className="relative overflow-hidden aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-full">
               <img
                 src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2084&q=80"
-                alt="We Make Staffing Simple."
+                alt="Temporary staffing professionals working together"
                 className="w-full h-full object-cover object-center"
               />
             </div>

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Industries = () => {
   return (
     <section className="py-16 md:pt-24 md:pb-24 bg-white" id="industries">
