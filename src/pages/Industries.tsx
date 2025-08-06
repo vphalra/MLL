@@ -68,7 +68,7 @@ const Industries = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-400 to-green-600">
+      <section className="bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[400px]">
             <div className="flex flex-col justify-center py-16">

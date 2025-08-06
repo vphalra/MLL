@@ -1,6 +1,7 @@
 // Removed React import
-import { Mail, Phone, MapPin, Facebook, Instagram } from 'lucide-react';
+import { Mail, MapPin, Facebook, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import mllLogo from '../assets/mll-logo.svg';
 
 const Footer = () => {
   // Removed unused variables and function
@@ -11,15 +12,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-3 mb-4 md:mb-6">
-              <div className="h-10 w-10 md:h-12 md:w-12 flex items-center justify-center">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="40" height="40" rx="4" fill="#2563eb"/>
-                  <path d="M8 8L32 32" stroke="white" strokeWidth="2"/>
-                  <path d="M8 8H32V32H8V8Z" stroke="white" strokeWidth="2"/>
-                </svg>
-              </div>
-              <span className="text-lg md:text-xl font-light tracking-tight text-gray-900">MLL Service Inc.</span>
+            <div className="mb-4 md:mb-6">
+              <img src={mllLogo} alt="MLL Service Inc." className="h-16 w-auto" />
             </div>
             <p className="text-gray-600 text-xs md:text-sm font-light leading-relaxed mb-4 md:mb-6">
               Providing professional labor solutions across multiple industries with expertise and dedication.
@@ -62,10 +56,7 @@ const Footer = () => {
                 <Mail className="h-4 w-4 md:h-5 md:w-5 text-gray-900 mt-1" />
                 <span className="text-gray-600 text-xs md:text-sm font-light">mllservicesinc@outlook.com</span>
               </li>
-              <li className="flex items-start space-x-3">
-                <Phone className="h-4 w-4 md:h-5 md:w-5 text-gray-900" />
-                <span className="text-gray-600 text-xs md:text-sm font-light">(555) 123-4567</span>
-              </li>
+
               <li className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 md:h-5 md:w-5 text-gray-900 mt-1" />
                 <span className="text-gray-600 text-xs md:text-sm font-light">

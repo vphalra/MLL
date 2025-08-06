@@ -1,5 +1,5 @@
 // Removed React import
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin, Send } from 'lucide-react';
 
 const industries = [
   'Manufacturing',
@@ -33,10 +33,7 @@ const Contact = () => {
                   Lowell, MA 01851
                 </span>
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 md:h-5 md:w-5 text-white" />
-                <span className="text-gray-200 text-xs md:text-sm font-light">(555) 123-4567</span>
-              </div>
+
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 md:h-5 md:w-5 text-white" />
                 <span className="text-gray-200 text-xs md:text-sm font-light">mllservicesinc@outlook.com</span>

@@ -6,6 +6,7 @@ import IndustriesComponent from './components/Industries'
 import Footer from './components/Footer'
 import IndustriesCarousel from './components/IndustriesCarousel'
 import manufacturingVideo from './assets/manufacturing.mp4'
+import mllLogo from './assets/mll-logo.svg'
 import Contact from './pages/Contact'
 import Process from './pages/Process'
 import About from './pages/About'
@@ -72,7 +73,7 @@ function Home() {
       </div>
       
       {/* Temporary Staffing Section */}
-      <div className="bg-[#2C2A28] lg:min-h-screen lg:flex lg:items-center">
+      <div className="bg-gray-800 lg:min-h-screen lg:flex lg:items-center">
         <div className="w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:min-h-screen lg:h-screen">
             {/* Left: Image */}
@@ -93,7 +94,7 @@ function Home() {
                 <p className="text-sm sm:text-base md:text-lg mb-5 sm:mb-6 md:mb-8 leading-relaxed opacity-90">
                   Whether you need temporary workers for seasonal demands, special projects, or extended absences, we have the people you've been looking for — pre-screened, trained, and ready to get to work. Discover why we were named the #1 temporary staffing agency in the U.S. by Forbes.
                 </p>
-                <button className="bg-white text-[#2C2A28] font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg hover:bg-gray-100 transition-colors duration-300 text-sm md:text-base">
+                <button className="bg-white text-gray-800 font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg hover:bg-gray-100 transition-colors duration-300 text-sm md:text-base">
                   STAFFING SOLUTIONS
                 </button>
               </div>
@@ -107,7 +108,7 @@ function Home() {
         <div className="w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:min-h-screen lg:h-screen">
             {/* Left: Content */}
-            <div className="text-[#2C2A28] flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-16 py-6 sm:py-8 lg:py-0 order-2 lg:order-1 -mt-2 lg:mt-0">
+            <div className="text-gray-800 flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-16 py-6 sm:py-8 lg:py-0 order-2 lg:order-1 -mt-2 lg:mt-0">
               <div className="max-w-lg">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight">
                   On-site Workforce Management
@@ -137,7 +138,7 @@ function Home() {
       <div className="bg-white py-12 md:py-20">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <div className="text-center mb-8 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#2C2A28] mb-4 md:mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 md:mb-8">
               Fluent in your fields and industries.
             </h2>
           </div>
@@ -147,12 +148,12 @@ function Home() {
       </div>
 
       {/* Call to Action Section */}
-      <div className="bg-[#2C2A28] py-12 md:py-16">
+      <div className="bg-gray-800 py-12 md:py-16">
         <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 md:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6 font-sans">
             Ready to find the perfect workforce solution?
           </h2>
-          <button className="bg-white text-[#2C2A28] font-semibold px-6 md:px-8 py-3 md:py-4 rounded-lg hover:bg-gray-100 transition-colors duration-300 text-base md:text-lg font-sans">
+          <button className="bg-white text-gray-800 font-semibold px-6 md:px-8 py-3 md:py-4 rounded-lg hover:bg-gray-100 transition-colors duration-300 text-base md:text-lg font-sans">
             CONTACT US
           </button>
         </div>
@@ -198,56 +199,49 @@ function AppContent({ mobileMenuOpen, toggleMobileMenu, setMobileMenuOpen }: { m
 
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col">
-          {/* Fixed Navigation Bar with Glass Blur Effect */}
-          <nav className='fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-lg border border-white/30 shadow-xl transition-all duration-300 py-2 my-2 mx-2 sm:mx-4 rounded-lg'>            
-            <div className='w-full flex justify-between items-center px-3 sm:px-5 md:px-8 lg:px-12'>              
-              <Link to="/" className='flex items-center space-x-1 sm:space-x-2 group'>                
-                <div className="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 bg-white/10 backdrop-blur-sm rounded-md flex items-center justify-center shadow-md group-hover:bg-white/20 transition-all duration-300">                  
-                  <svg width="16" height="16" className="sm:w-[20px] sm:h-[20px] md:w-[24px] md:h-[24px]" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">                    
-                    <path d="M8 8L32 32" stroke="white" strokeWidth="2"/>                    
-                    <path d="M8 8H32V32H8V8Z" stroke="white" strokeWidth="2"/>                  
-                  </svg>                
-                </div>                
-                <span className='text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white truncate group-hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)] transition-all duration-300'>MLL Service Inc.</span>              
+          {/* Fixed Navigation Bar - Modern Clean White */}
+          <nav className='fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm transition-all duration-300'>            
+            <div className='w-full flex justify-between items-center px-4 sm:px-6 md:px-8 lg:px-12 py-0.25'>              
+              <Link to="/" className='flex items-center group'>                
+                <img src={mllLogo} alt="MLL Service Inc." className="h-[88px] w-auto group-hover:opacity-80 transition-all duration-300" />              
               </Link>              
               
               {/* Mobile menu button */}
               <button                 
-                className="md:hidden text-white p-2 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center shadow-md hover:bg-white/20 transition-all duration-300"                 
+                className="md:hidden text-gray-700 p-2 bg-gray-50 hover:bg-gray-100 rounded-lg flex items-center justify-center shadow-sm transition-all duration-300"                 
                 onClick={toggleMobileMenu}
                 aria-label="Toggle menu"
               >
                 {mobileMenuOpen ? (                  
-                  <X className="h-5 w-5 sm:h-6 sm:w-6" />                
+                  <X className="h-6 w-6" />                
                 ) : (                  
-                  <Menu className="h-5 w-5 sm:h-6 sm:w-6" />                
+                  <Menu className="h-6 w-6" />                
                 )}
               </button>
 
               {/* Desktop Navigation */}
-              <ul className='hidden md:flex md:flex-wrap list-none space-x-1 sm:space-x-2 md:space-x-3 lg:space-x-6 xl:space-x-8 items-center justify-end'>
-                <li className='px-1 sm:px-1.5 md:px-2 py-2'>
-                  <Link to="/about" className="group text-white text-xs sm:text-sm lg:text-base transition-all duration-300 ease-in-out hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)] hover:scale-110 transform inline-block whitespace-nowrap">
+              <ul className='hidden md:flex list-none space-x-8 items-center'>
+                <li>
+                  <Link to="/about" className="group text-gray-700 font-medium hover:text-gray-900 transition-all duration-300 relative">
                     About
-                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-800 group-hover:w-full transition-all duration-300"></span>
                   </Link>
                 </li>
-                <li className='px-1 sm:px-1.5 md:px-2 py-2'>
-                  <Link to="/industries" className="group text-white text-xs sm:text-sm lg:text-base transition-all duration-300 ease-in-out hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)] hover:scale-110 transform inline-block whitespace-nowrap">
+                <li>
+                  <Link to="/industries" className="group text-gray-700 font-medium hover:text-gray-900 transition-all duration-300 relative">
                     Industries
-                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-800 group-hover:w-full transition-all duration-300"></span>
                   </Link>
                 </li>
-                <li className='px-1 sm:px-1.5 md:px-2 py-2'>
-                  <Link to="/process" className="group text-white text-xs sm:text-sm lg:text-base transition-all duration-300 ease-in-out hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)] hover:scale-110 transform inline-block whitespace-nowrap">
+                <li>
+                  <Link to="/process" className="group text-gray-700 font-medium hover:text-gray-900 transition-all duration-300 relative">
                     Working with MLL
-                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-800 group-hover:w-full transition-all duration-300"></span>
                   </Link>
                 </li>
-                <li className='px-1 sm:px-1.5 md:px-2 py-2'>
-                  <Link to="/contact" className="group text-white text-xs sm:text-sm lg:text-base transition-all duration-300 ease-in-out hover:text-shadow-[0_0_10px_rgba(255,255,255,0.7)] hover:scale-110 transform inline-block whitespace-nowrap">
-                    Contact
-                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
+                <li>
+                  <Link to="/contact" className="bg-gray-800 text-white px-6 py-2 font-bold uppercase tracking-wide hover:bg-gray-900 transition-all duration-300 shadow-sm hover:shadow-md">
+                    CONTACT US
                   </Link>
                 </li>
               </ul>
@@ -256,31 +250,31 @@ function AppContent({ mobileMenuOpen, toggleMobileMenu, setMobileMenuOpen }: { m
 
           {/* Mobile Navigation */}
           <div 
-            className={`md:hidden bg-black/80 backdrop-blur-md py-4 sm:py-6 px-4 sm:px-6 rounded-lg mx-2 sm:mx-4 my-2 shadow-xl border border-white/30 transition-all duration-300 ease-in-out transform ${mobileMenuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'} fixed top-16 sm:top-20 left-0 right-0 z-40`}
+            className={`md:hidden bg-white/95 backdrop-blur-sm py-6 px-6 shadow-lg border border-gray-100 transition-all duration-300 ease-in-out transform ${mobileMenuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'} fixed top-20 left-4 right-4 z-40 rounded-lg`}
           >
             <ul className='flex flex-col space-y-4'>
-              <li className="border-b border-white/10 pb-3">
+              <li className="border-b border-gray-100 pb-3">
                 <Link 
                   to="/about" 
-                  className="text-white text-lg font-medium flex items-center hover:text-white/70 transition-colors duration-300"
+                  className="text-gray-700 text-lg font-medium flex items-center hover:text-gray-900 transition-colors duration-300"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   About
                 </Link>
               </li>
-              <li className="border-b border-white/10 pb-3">
+              <li className="border-b border-gray-100 pb-3">
                 <Link
                   to="/industries"
-                  className="text-white text-lg font-medium flex items-center hover:text-white/70 transition-colors duration-300"
+                  className="text-gray-700 text-lg font-medium flex items-center hover:text-gray-900 transition-colors duration-300"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Industries
                 </Link>
               </li>
-              <li className="border-b border-white/10 pb-3">
+              <li className="border-b border-gray-100 pb-3">
                 <Link 
                   to="/process" 
-                  className="text-white text-lg font-medium flex items-center hover:text-white/70 transition-colors duration-300"
+                  className="text-gray-700 text-lg font-medium flex items-center hover:text-gray-900 transition-colors duration-300"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Working with MLL
@@ -289,10 +283,10 @@ function AppContent({ mobileMenuOpen, toggleMobileMenu, setMobileMenuOpen }: { m
               <li>
                 <Link 
                   to="/contact" 
-                  className="text-white text-lg font-medium flex items-center hover:text-white/70 transition-colors duration-300"
+                  className="bg-gray-800 text-white px-6 py-3 font-bold uppercase tracking-wide hover:bg-gray-900 transition-all duration-300 shadow-sm text-center block"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Contact
+                  CONTACT US
                 </Link>
               </li>
             </ul>

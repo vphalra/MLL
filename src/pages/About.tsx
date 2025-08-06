@@ -45,18 +45,18 @@ const About = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4 max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
             Our Mission
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
             Our mission is to serve and provide our clients with permanent efficiency by taking a deep dive into the nature of our client's industry.
           </p>
-          <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">
             We identify where production is lacking, recruit the right resources, and provide the necessary attention required to maximize our clients' return on their investment.
           </p>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-lg text-gray-300 leading-relaxed">
             Through strategic partnerships and industry expertise, we deliver solutions that create lasting impact and sustainable growth for businesses across various sectors.
           </p>
         </div>

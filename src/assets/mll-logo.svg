@@ -1,0 +1,41 @@
+<svg width="200" height="120" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Clouds -->
+  <g transform="translate(40, 10)">
+    <path d="M15 25C15 20 20 15 25 15C30 10 40 10 45 15C50 10 60 10 65 15C70 15 75 20 75 25C75 30 70 35 65 35H25C20 35 15 30 15 25Z" fill="#1f2937"/>
+    <path d="M25 20C25 15 30 10 35 10C40 5 50 5 55 10C60 5 70 5 75 10C80 10 85 15 85 20C85 25 80 30 75 30H35C30 30 25 25 25 20Z" fill="#1f2937"/>
+  </g>
+  
+  <!-- Building -->
+  <g transform="translate(20, 45)">
+    <!-- Main building structure -->
+    <rect x="0" y="0" width="40" height="50" fill="#1f2937"/>
+    
+    <!-- Building details -->
+    <rect x="2" y="2" width="36" height="8" fill="#1f2937"/>
+    <rect x="2" y="12" width="8" height="8" fill="white"/>
+    <rect x="12" y="12" width="8" height="8" fill="#1f2937"/>
+    <rect x="22" y="12" width="8" height="8" fill="white"/>
+    <rect x="32" y="12" width="6" height="8" fill="#1f2937"/>
+    
+    <rect x="2" y="22" width="8" height="8" fill="#1f2937"/>
+    <rect x="12" y="22" width="8" height="8" fill="white"/>
+    <rect x="22" y="22" width="8" height="8" fill="#1f2937"/>
+    <rect x="32" y="22" width="6" height="8" fill="white"/>
+    
+    <rect x="2" y="32" width="8" height="8" fill="white"/>
+    <rect x="12" y="32" width="8" height="8" fill="#1f2937"/>
+    <rect x="22" y="32" width="8" height="8" fill="white"/>
+    <rect x="32" y="32" width="6" height="8" fill="#1f2937"/>
+    
+    <rect x="2" y="42" width="8" height="8" fill="#1f2937"/>
+    <rect x="12" y="42" width="8" height="8" fill="white"/>
+    <rect x="22" y="42" width="8" height="8" fill="#1f2937"/>
+    <rect x="32" y="42" width="6" height="8" fill="white"/>
+  </g>
+  
+  <!-- MLL Text -->
+  <text x="75" y="75" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#1f2937">MLL</text>
+  
+  <!-- SERVICE INC. Text -->
+  <text x="75" y="95" font-family="Arial, sans-serif" font-size="12" font-weight="normal" fill="#1f2937" letter-spacing="2px">SERVICE INC.</text>
+</svg>
