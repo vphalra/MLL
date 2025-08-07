@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="mb-4 md:mb-6">
-              <img src={mllLogo} alt="MLL Service Inc." className="h-16 w-auto invert" />
+              <img src={mllLogo} alt="MLL Service Inc." className="h-20 w-auto invert" />
             </div>
             <p className="text-gray-600 text-xs md:text-sm font-light leading-relaxed mb-4 md:mb-6">
               Providing professional labor solutions across multiple industries with expertise and dedication.
