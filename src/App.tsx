@@ -200,10 +200,10 @@ function AppContent({ mobileMenuOpen, toggleMobileMenu, setMobileMenuOpen }: { m
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col">
           {/* Fixed Navigation Bar - Modern Clean White */}
-          <nav className='fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm transition-all duration-300'>            
-            <div className='w-full flex justify-between items-center px-4 sm:px-6 md:px-8 lg:px-12 py-0.25'>              
-              <Link to="/" className='flex items-center group'>                
-                <img src={mllLogo} alt="MLL Service Inc." className="h-[90px] w-auto group-hover:opacity-80 transition-all duration-300 invert" />              
+          <nav className='fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm transition-all duration-300 h-20'>            
+            <div className='w-full h-full flex justify-between items-center px-4 sm:px-6 md:px-8 lg:px-12'>              
+              <Link to="/" className='flex items-center group h-full'>                
+                <img src={mllLogo} alt="MLL Service Inc." className="h-[140px] w-auto group-hover:opacity-80 transition-all duration-300 invert" />              
               </Link>              
               
               {/* Mobile menu button */}
