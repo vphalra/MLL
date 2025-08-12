@@ -250,7 +250,7 @@ function AppContent({ mobileMenuOpen, toggleMobileMenu, setMobileMenuOpen }: { m
 
           {/* Mobile Navigation */}
           <div 
-            className={`md:hidden bg-white/95 backdrop-blur-sm py-6 px-6 shadow-lg border border-gray-100 transition-all duration-300 ease-in-out transform ${mobileMenuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'} fixed top-20 left-4 right-4 z-40 rounded-lg`}
+            className={`md:hidden bg-white/95 backdrop-blur-sm py-6 px-6 shadow-lg border border-gray-100 transition-all duration-300 ease-in-out transform ${mobileMenuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'} fixed top-24 left-4 right-4 z-40 rounded-lg`}
           >
             <ul className='flex flex-col space-y-4'>
               <li className="border-b border-gray-100 pb-3">

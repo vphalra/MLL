@@ -1,4 +1,3 @@
-// Removed React import
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
 
 const industries = [
@@ -11,51 +10,98 @@ const industries = [
 
 const Contact = () => {
   return (
-    <>
-      {/* Background overlay that extends behind nav bar */}
-      <div className="fixed top-0 left-0 w-full h-screen bg-gradient-to-br from-[#2C2A28]/80 via-[#23211f]/60 to-[#181715]/80 backdrop-blur-sm -z-20"></div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      {/* Header Section */}
+      <div className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-16">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+             Contact Us
+           </h1>
+        </div>
+      </div>
 
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center pt-12 pb-28 px-4 md:px-6">
-        <h1 className="text-3xl md:text-4xl font-bold text-white text-center mb-2">Contact Us</h1>
-        <p className="text-gray-200 text-center text-sm md:text-base mb-8 md:mb-12 max-w-2xl">
-          Get in touch with our team for any inquiries or support. We're here to help you find the perfect labor solution for your business.
-        </p>
-        <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-          {/* Left: Office Info and Map */}
-          <div className="space-y-6 md:space-y-8">
-            <div className="rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 p-6 md:p-8 shadow-lg">
-              <h2 className="text-lg md:text-xl font-semibold text-white mb-4 md:mb-6">Our Office</h2>
-              <div className="space-y-3 md:space-y-4">
-                <div className="flex items-start space-x-3">
-                  <MapPin className="h-4 w-4 md:h-5 md:w-5 text-white mt-1" />
-                  <span className="text-gray-200 text-xs md:text-sm font-light">
-                    16 Linwood Street<br />
-                    Lowell, MA 01851
-                  </span>
-                </div>
-
-                <div className="flex items-center space-x-3">
-                  <Mail className="h-4 w-4 md:h-5 md:w-5 text-white" />
-                  <span className="text-gray-200 text-xs md:text-sm font-light">mllservicesinc@outlook.com</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Mail className="h-4 w-4 md:h-5 md:w-5 text-white" />
-                  <span className="text-gray-200 text-xs md:text-sm font-light">admin.office@mllservices.com</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Phone className="h-4 w-4 md:h-5 md:w-5 text-white" />
-                  <span className="text-gray-200 text-xs md:text-sm font-light">978-954-4781</span>
-                </div>
-              </div>
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Left Side - Contact Form */}
+          <div className="space-y-6">
+            <div>
+              <label className="block text-gray-700 text-sm font-medium mb-2">Full name*</label>
+              <input 
+                type="text" 
+                placeholder="Enter your full name" 
+                className="w-full px-4 py-3 bg-gray-200 border-0 rounded-none text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                required 
+              />
             </div>
-            <div className="rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 p-4 md:p-6 shadow-lg">
-              <h2 className="text-lg md:text-xl font-semibold text-white mb-3 md:mb-4">Location</h2>
-              <div className="overflow-hidden rounded-xl">
+            
+            <div>
+              <label className="block text-gray-700 text-sm font-medium mb-2">Email address*</label>
+              <input 
+                type="email" 
+                placeholder="Enter your email address" 
+                className="w-full px-4 py-3 bg-gray-200 border-0 rounded-none text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                required 
+              />
+            </div>
+            
+            <div>
+              <label className="block text-gray-700 text-sm font-medium mb-2">Contact number</label>
+              <input 
+                type="tel" 
+                placeholder="Enter your contact number" 
+                className="w-full px-4 py-3 bg-gray-200 border-0 rounded-none text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-gray-700 text-sm font-medium mb-2">Business Name</label>
+              <input 
+                type="text" 
+                placeholder="Enter your business name" 
+                className="w-full px-4 py-3 bg-gray-200 border-0 rounded-none text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-gray-700 text-sm font-medium mb-2">Industry</label>
+              <select className="w-full px-4 py-3 bg-gray-200 border-0 rounded-none text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400">
+                <option value="">Select an industry</option>
+                {industries.map((industry) => (
+                  <option key={industry} value={industry}>{industry}</option>
+                ))}
+              </select>
+            </div>
+            
+            <div>
+              <label className="block text-gray-700 text-sm font-medium mb-2">Message*</label>
+              <textarea 
+                placeholder="Type your message here..." 
+                rows={6}
+                className="w-full px-4 py-3 bg-gray-200 border-0 rounded-none text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 resize-none"
+                required
+              />
+            </div>
+            
+            <button 
+              type="submit" 
+              className="bg-red-500 hover:bg-red-600 text-white font-medium px-8 py-3 rounded-full transition-colors duration-300 flex items-center space-x-2"
+            >
+              <span>Send message</span>
+              <Send className="h-4 w-4" />
+            </button>
+          </div>
+
+          {/* Right Side - Map and Contact Info */}
+          <div className="space-y-8">
+            {/* Map Section */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="h-80">
                 <iframe
                   title="Google Map"
                   src="https://www.google.com/maps?q=16+Linwood+Street,+Lowell,+MA+01851&output=embed"
                   width="100%"
-                  height="200"
+                  height="100%"
                   style={{ border: 0 }}
                   allowFullScreen={false}
                   loading="lazy"
@@ -63,52 +109,44 @@ const Contact = () => {
                 ></iframe>
               </div>
             </div>
-          </div>
-          {/* Right: Contact Form */}
-          <div className="rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 p-6 md:p-8 shadow-lg">
-            <h2 className="text-lg md:text-xl font-semibold text-white mb-4 md:mb-6">Send Us a Message</h2>
-            <form className="space-y-4 md:space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-gray-200 text-xs md:text-sm mb-1">Full Name *</label>
-                  <input type="text" className="w-full rounded-lg bg-[#181715] text-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-white" placeholder="John Doe" required />
+
+            {/* Contact Information */}
+             <div className="space-y-6">
+               <div>
+                 <h3 className="text-lg font-semibold text-gray-800 mb-4">Contact us at:</h3>
+                 <div className="space-y-2">
+                   <div className="flex items-center space-x-3">
+                     <Mail className="h-5 w-5 text-gray-600" />
+                     <span className="text-gray-600">mllservicesinc@outlook.com</span>
+                   </div>
+                   <div className="flex items-center space-x-3">
+                     <Mail className="h-5 w-5 text-gray-600" />
+                     <span className="text-gray-600">admin.office@mllservices.com</span>
+                   </div>
+                 </div>
+               </div>
+              
+              <div className="text-gray-600 text-sm">
+                <div className="flex items-center space-x-3 mb-2">
+                  <Phone className="h-4 w-4" />
+                  <span>978-954-4781</span>
                 </div>
-                <div>
-                  <label className="block text-gray-200 text-xs md:text-sm mb-1">Business Name *</label>
-                  <input type="text" className="w-full rounded-lg bg-[#181715] text-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-white" placeholder="Company Inc." required />
+                <div className="flex items-start space-x-3">
+                  <MapPin className="h-4 w-4 mt-1" />
+                  <div>
+                    <p>MLL Services Inc</p>
+                    <p>P.O Box 760</p>
+                    <p>16 Linwood Street</p>
+                    <p>Lowell, MA 01851</p>
+                    <p>United States</p>
+                  </div>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-gray-200 text-xs md:text-sm mb-1">Email *</label>
-                  <input type="email" className="w-full rounded-lg bg-[#181715] text-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-white" placeholder="john@company.com" required />
-                </div>
-                <div>
-                  <label className="block text-gray-200 text-xs md:text-sm mb-1">Phone *</label>
-                  <input type="tel" className="w-full rounded-lg bg-[#181715] text-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-white" placeholder="(555) 123-4567" required />
-                </div>
-              </div>
-              <div>
-                <label className="block text-gray-200 text-xs md:text-sm mb-1">Industry *</label>
-                <select className="w-full rounded-lg bg-[#181715] text-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-white" required>
-                  <option value="">Select an industry</option>
-                  {industries.map((industry) => (
-                    <option key={industry} value={industry}>{industry}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <label className="block text-gray-200 text-xs md:text-sm mb-1">Message *</label>
-                <textarea className="w-full rounded-lg bg-[#181715] text-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-white" rows={4} placeholder="Please describe how we can help you..." required />
-              </div>
-              <button type="submit" className="w-full bg-white text-black font-semibold py-2 md:py-3 rounded-lg transition-colors duration-300 hover:bg-gray-200 flex items-center justify-center space-x-2">
-                <span>Send Message</span> <Send className="h-4 w-4 md:h-5 md:w-5" />
-              </button>
-            </form>
+            </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
