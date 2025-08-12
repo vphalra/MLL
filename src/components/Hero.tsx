@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
           </div>
         </h1>
         
-        <p className={`text-base sm:text-lg md:text-xl mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto transition-all duration-600 ease-out ${
+        <p className={`text-base sm:text-lg md:text-xl mt-6 sm:mt-4 md:mt-2 mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto transition-all duration-600 ease-out ${
           animationStage >= 4 ? 'opacity-90 transform translate-y-0' : 'opacity-0 transform translate-y-4'
         }`}>
           Empowering Your Business with the Right People
