@@ -6,7 +6,7 @@ import IndustriesComponent from './components/Industries'
 import Footer from './components/Footer'
 import IndustriesCarousel from './components/IndustriesCarousel'
 import manufacturingVideo from './assets/manufacturing.mp4'
-import mllLogo from './assets/newlogo.png'
+import mllLogo from './assets/MLL-2.png'
 import Contact from './pages/Contact'
 import Process from './pages/Process'
 import About from './pages/About'
@@ -203,7 +203,7 @@ function AppContent({ mobileMenuOpen, toggleMobileMenu, setMobileMenuOpen }: { m
           <nav className='fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm transition-all duration-300 h-20'>            
             <div className='w-full h-full flex justify-between items-center px-4 sm:px-6 md:px-8 lg:px-12'>              
               <Link to="/" className='flex items-center group h-full'>                
-                <img src={mllLogo} alt="MLL Service Inc." className="h-[140px] w-auto group-hover:opacity-80 transition-all duration-300 invert" />              
+                <img src={mllLogo} alt="MLL Services Inc." className="h-[140px] w-auto group-hover:opacity-80 transition-all duration-300 invert" />              
               </Link>              
               
               {/* Mobile menu button */}

@@ -38,7 +38,7 @@ const About = () => {
           <div className="relative">
             <img
               src={mllphoto}
-              alt="MLL Service Inc. - Excellence in Labor Solutions"
+              alt="MLL Services Inc. - Excellence in Labor Solutions"
               className="w-full h-full object-cover"
             />
           </div>

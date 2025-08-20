@@ -1,6 +1,6 @@
 import { Mail, MapPin, Phone, Facebook, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import mllLogo from '../assets/newlogo.png';
+import mllLogo from '../assets/MLL-2.png';
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="mb-4 md:mb-6">
-              <img src={mllLogo} alt="MLL Service Inc." className="h-20 w-auto invert" />
+              <img src={mllLogo} alt="MLL Services Inc." className="h-20 w-auto invert" />
               <p className="text-gray-600 text-xs md:text-sm font-light leading-relaxed mt-2">
                 Your Partner in Staffing Success.
               </p>
@@ -73,9 +73,9 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 md:mt-16 pt-6 md:pt-8 border-t border-gray-200">
-          <div className="text-center text-gray-500 text-xs md:text-sm font-light">
-            © {new Date().getFullYear()} MLL Service Inc. All rights reserved.
-          </div>
+          <p className="text-center text-gray-500 text-xs md:text-sm font-light">
+            © {new Date().getFullYear()} MLL Services Inc. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

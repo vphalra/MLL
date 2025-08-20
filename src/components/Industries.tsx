@@ -35,7 +35,7 @@ const Industries = () => {
                 href="#contact" 
                 className="inline-flex items-center text-lg font-semibold text-blue-600 hover:text-blue-800 transition-colors duration-300 group"
               >
-                Working with MLL Service Inc
+                Working with MLL Services Inc
                 <svg 
                   className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
                   fill="none" 
