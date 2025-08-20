@@ -9,6 +9,27 @@ const industries = [
 ];
 
 const Contact = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+    
+    fetch('/', {
+      method: 'POST',
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => {
+        console.log('Form successfully submitted');
+        alert('Thank you! Your message has been sent. We\'ll get back to you soon.');
+        myForm.reset(); // Optional: Reset form after submission
+      })
+      .catch((error) => {
+        console.error('Submission error:', error);
+        alert('There was an error sending the message. Please try again.');
+      });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Header Section */}
@@ -24,11 +45,21 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left Side - Contact Form */}
-          <div className="space-y-6">
+          <form 
+            name="contact-form" 
+            method="POST" 
+            data-netlify="true" 
+            data-netlify-recaptcha="true" 
+            onSubmit={handleSubmit}
+            className="space-y-6"
+          >
+            <input type="hidden" name="form-name" value="contact-form" />
+            
             <div>
               <label className="block text-gray-700 text-sm font-medium mb-2">Full name*</label>
               <input 
                 type="text" 
+                name="full-name"
                 placeholder="Enter your full name" 
                 className="w-full px-4 py-3 bg-gray-200 border-0 rounded-none text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400"
                 required 
@@ -39,6 +70,7 @@ const Contact = () => {
               <label className="block text-gray-700 text-sm font-medium mb-2">Email address*</label>
               <input 
                 type="email" 
+                name="email"
                 placeholder="Enter your email address" 
                 className="w-full px-4 py-3 bg-gray-200 border-0 rounded-none text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400"
                 required 
@@ -49,6 +81,7 @@ const Contact = () => {
               <label className="block text-gray-700 text-sm font-medium mb-2">Contact number</label>
               <input 
                 type="tel" 
+                name="contact-number"
                 placeholder="Enter your contact number" 
                 className="w-full px-4 py-3 bg-gray-200 border-0 rounded-none text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400"
               />
@@ -58,6 +91,7 @@ const Contact = () => {
               <label className="block text-gray-700 text-sm font-medium mb-2">Business Name</label>
               <input 
                 type="text" 
+                name="business-name"
                 placeholder="Enter your business name" 
                 className="w-full px-4 py-3 bg-gray-200 border-0 rounded-none text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400"
               />
@@ -65,7 +99,10 @@ const Contact = () => {
             
             <div>
               <label className="block text-gray-700 text-sm font-medium mb-2">Industry</label>
-              <select className="w-full px-4 py-3 bg-gray-200 border-0 rounded-none text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400">
+              <select 
+                name="industry"
+                className="w-full px-4 py-3 bg-gray-200 border-0 rounded-none text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400"
+              >
                 <option value="">Select an industry</option>
                 {industries.map((industry) => (
                   <option key={industry} value={industry}>{industry}</option>
@@ -76,12 +113,15 @@ const Contact = () => {
             <div>
               <label className="block text-gray-700 text-sm font-medium mb-2">Message*</label>
               <textarea 
+                name="message"
                 placeholder="Type your message here..." 
                 rows={6}
                 className="w-full px-4 py-3 bg-gray-200 border-0 rounded-none text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 resize-none"
                 required
               />
             </div>
+            
+            <div data-netlify-recaptcha="true"></div>
             
             <button 
               type="submit" 
@@ -90,7 +130,7 @@ const Contact = () => {
               <span>Send message</span>
               <Send className="h-4 w-4" />
             </button>
-          </div>
+          </form>
 
           {/* Right Side - Map and Contact Info */}
           <div className="space-y-8">
@@ -115,13 +155,15 @@ const Contact = () => {
                <div>
                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Contact us at:</h3>
                  <div className="space-y-2">
-                   <div className="flex items-center space-x-3">
-                     <Mail className="h-5 w-5 text-gray-600" />
-                     <span className="text-gray-600">mllservicesinc@outlook.com</span>
-                   </div>
-                   <div className="flex items-center space-x-3">
-                     <Mail className="h-5 w-5 text-gray-600" />
-                     <span className="text-gray-600">admin.office@mllservices.com</span>
+                   <div className="space-y-2">
+                     <div className="flex items-center space-x-3">
+                       <Mail className="h-5 w-5 text-gray-600" />
+                       <span className="text-gray-600">mllservicesinc@outlook.com</span>
+                     </div>
+                     <div className="flex items-center space-x-3">
+                       <Mail className="h-5 w-5 text-gray-600" />
+                       <span className="text-gray-600">admin.office@mllservices.com</span>
+                     </div>
                    </div>
                  </div>
                </div>
