@@ -6,14 +6,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', sans-serif;
-}
-
 @layer utilities {
   .text-shadow-glow {
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.7), 0 0 12px rgba(255, 255, 255, 0.5);
@@ -48,4 +40,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "DM Serif Text", serif;
   font-weight: 400;
   font-style: italic;
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
