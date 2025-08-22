@@ -28,18 +28,18 @@ function Home() {
     if (location.state) {
       console.log("Navigation state detected:", location.state);
       const state = location.state as any;
-      
+
       if (state.scrollToIndustries || state.scrollToIndustry) {
         console.log("Scrolling to industries section");
         setTimeout(() => {
           if (industriesRef.current) {
             // Improved smooth scrolling with better options
-            industriesRef.current.scrollIntoView({ 
-              behavior: 'smooth', 
+            industriesRef.current.scrollIntoView({
+              behavior: 'smooth',
               block: 'start',
               inline: 'nearest'
             });
-            
+
             // If we also need to show a specific industry
             if (state.scrollToIndustry && typeof state.industryIndex === 'number') {
               console.log("Selecting industry:", state.industryIndex);
@@ -71,7 +71,7 @@ function Home() {
       <div ref={industriesRef} id="industries-section">
         <IndustriesComponent />
       </div>
-      
+
       {/* Temporary Staffing Section */}
       <div className="bg-gray-800 lg:min-h-screen lg:flex lg:items-center">
         <div className="w-full">
@@ -84,7 +84,7 @@ function Home() {
                 className="w-full h-full object-cover object-center"
               />
             </div>
-            
+
             {/* Right: Content */}
             <div className="text-white flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-16 py-6 sm:py-8 lg:py-0 -mt-2 lg:mt-0">
               <div className="max-w-lg">
@@ -94,9 +94,9 @@ function Home() {
                 <p className="text-sm sm:text-base md:text-lg mb-5 sm:mb-6 md:mb-8 leading-relaxed opacity-90">
                   Whether you need temporary workers for seasonal demands, special projects, or extended absences, we have the people you've been looking for — pre-screened, trained, and ready to get to work. Discover why we were named the #1 temporary staffing agency in the U.S. by Forbes.
                 </p>
-                <button className="bg-white text-gray-800 font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg hover:bg-gray-100 transition-colors duration-300 text-sm md:text-base">
+                <Link to="/industries" className="bg-white text-gray-800 font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg hover:bg-gray-100 transition-colors duration-300 text-sm md:text-base">
                   STAFFING SOLUTIONS
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -114,14 +114,14 @@ function Home() {
                   On-site Workforce Management
                 </h2>
                 <p className="text-sm sm:text-base md:text-lg mb-5 sm:mb-6 md:mb-8 leading-relaxed opacity-90">
-                  Looking to minimize daily challenges related to recruiting, onboarding, retention, and scheduling? As an on-site workforce partner, Kelly helps organizations offload hiring and team management tasks associated with a high-volume, temporary workforce.
+                  Looking to minimize daily challenges related to recruiting, onboarding, retention, and scheduling? As an on-site workforce partner, MLL Services Inc. helps organizations offload hiring and team management tasks associated with a high-volume, temporary workforce.
                 </p>
-                <button className="bg-green-600 text-white font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg hover:bg-green-700 transition-colors duration-300 text-sm md:text-base">
+                <Link to="/industries" className="bg-gray-800 text-white font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg hover:bg-blue-900 transition-colors duration-300 text-sm md:text-base">
                   ON-SITE SOLUTIONS
-                </button>
+                </Link>
               </div>
             </div>
-            
+
             {/* Right: Image */}
             <div className="relative overflow-hidden aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-full order-1 lg:order-2">
               <img
@@ -142,20 +142,21 @@ function Home() {
               Fluent in your fields and industries.
             </h2>
           </div>
-          
+
           <IndustriesCarousel />
         </div>
       </div>
 
       {/* Call to Action Section */}
+
       <div className="bg-gray-800 py-12 md:py-16">
         <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 md:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6 font-sans">
+          <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-white mb-8 md:mb-10 font-sans">
             Ready to find the perfect workforce solution?
           </h2>
-          <button className="bg-white text-gray-800 font-semibold px-6 md:px-8 py-3 md:py-4 rounded-lg hover:bg-gray-100 transition-colors duration-300 text-base md:text-lg font-sans">
+          <Link to="/contact" className="bg-white text-gray-800 font-semibold px-6 md:px-8 py-3 md:py-4 rounded-lg hover:bg-gray-100 transition-colors duration-300 text-base md:text-lg font-sans">
             CONTACT US
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -181,6 +182,10 @@ function AppContent({ mobileMenuOpen, toggleMobileMenu, setMobileMenuOpen }: { m
   const location = useLocation();
   const showVideoBackground = location.pathname === '/' || location.pathname === '/contact';
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <div className="relative">
       {/* Video Background - only on home page */}
@@ -199,114 +204,114 @@ function AppContent({ mobileMenuOpen, toggleMobileMenu, setMobileMenuOpen }: { m
 
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col">
-          {/* Fixed Navigation Bar - Modern Clean White */}
-          <nav className='fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm transition-all duration-300 h-20'>            
-            <div className='w-full h-full flex justify-between items-center px-4 sm:px-6 md:px-8 lg:px-12'>              
-              <Link to="/" className='flex items-center group h-full'>                
-                <img src={mllLogo} alt="MLL Services Inc." className="h-[140px] w-auto group-hover:opacity-80 transition-all duration-300 invert" />              
-              </Link>              
-              
-              {/* Mobile menu button */}
-              <button                 
-                className="md:hidden text-gray-700 p-2 bg-gray-50 hover:bg-gray-100 rounded-lg flex items-center justify-center shadow-sm transition-all duration-300"                 
-                onClick={toggleMobileMenu}
-                aria-label="Toggle menu"
-              >
-                {mobileMenuOpen ? (                  
-                  <X className="h-6 w-6" />                
-                ) : (                  
-                  <Menu className="h-6 w-6" />                
-                )}
-              </button>
+        {/* Fixed Navigation Bar - Modern Clean White */}
+        <nav className='fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm transition-all duration-300 h-20'>
+          <div className='w-full h-full flex justify-between items-center px-4 sm:px-6 md:px-8 lg:px-12'>
+            <Link to="/" className='flex items-center group h-full'>
+              <img src={mllLogo} alt="MLL Services Inc." className="h-[140px] w-auto group-hover:opacity-80 transition-all duration-300 invert" />
+            </Link>
 
-              {/* Desktop Navigation */}
-              <ul className='hidden md:flex list-none space-x-8 items-center'>
-                <li>
-                  <Link to="/about" className="group text-gray-700 font-medium hover:text-gray-900 transition-all duration-300 relative">
-                    About
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-800 group-hover:w-full transition-all duration-300"></span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/industries" className="group text-gray-700 font-medium hover:text-gray-900 transition-all duration-300 relative">
-                    Industries
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-800 group-hover:w-full transition-all duration-300"></span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/process" className="group text-gray-700 font-medium hover:text-gray-900 transition-all duration-300 relative">
-                    Working with MLL
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-800 group-hover:w-full transition-all duration-300"></span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/contact" className="bg-gray-800 text-white px-6 py-2 font-bold uppercase tracking-wide hover:bg-gray-900 transition-all duration-300 shadow-sm hover:shadow-md">
-                    CONTACT US
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </nav>
+            {/* Mobile menu button */}
+            <button
+              className="md:hidden text-gray-700 p-2 bg-gray-50 hover:bg-gray-100 rounded-lg flex items-center justify-center shadow-sm transition-all duration-300"
+              onClick={toggleMobileMenu}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
 
-          {/* Mobile Navigation */}
-          <div 
-            className={`md:hidden bg-white/95 backdrop-blur-sm py-6 px-6 shadow-lg border border-gray-100 transition-all duration-300 ease-in-out transform ${mobileMenuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'} fixed top-24 left-4 right-4 z-40 rounded-lg`}
-          >
-            <ul className='flex flex-col space-y-4'>
-              <li className="border-b border-gray-100 pb-3">
-                <Link 
-                  to="/about" 
-                  className="text-gray-700 text-lg font-medium flex items-center hover:text-gray-900 transition-colors duration-300"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
+            {/* Desktop Navigation */}
+            <ul className='hidden md:flex list-none space-x-8 items-center'>
+              <li>
+                <Link to="/about" className="group text-gray-700 font-medium hover:text-gray-900 transition-all duration-300 relative">
                   About
-                </Link>
-              </li>
-              <li className="border-b border-gray-100 pb-3">
-                <Link
-                  to="/industries"
-                  className="text-gray-700 text-lg font-medium flex items-center hover:text-gray-900 transition-colors duration-300"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Industries
-                </Link>
-              </li>
-              <li className="border-b border-gray-100 pb-3">
-                <Link 
-                  to="/process" 
-                  className="text-gray-700 text-lg font-medium flex items-center hover:text-gray-900 transition-colors duration-300"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Working with MLL
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-800 group-hover:w-full transition-all duration-300"></span>
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/contact" 
-                  className="bg-gray-800 text-white px-6 py-3 font-bold uppercase tracking-wide hover:bg-gray-900 transition-all duration-300 shadow-sm text-center block"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
+                <Link to="/industries" className="group text-gray-700 font-medium hover:text-gray-900 transition-all duration-300 relative">
+                  Industries
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-800 group-hover:w-full transition-all duration-300"></span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/process" className="group text-gray-700 font-medium hover:text-gray-900 transition-all duration-300 relative">
+                  Working with MLL
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-800 group-hover:w-full transition-all duration-300"></span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="bg-gray-800 text-white px-6 py-2 font-bold uppercase tracking-wide hover:bg-gray-900 transition-all duration-300 shadow-sm hover:shadow-md">
                   CONTACT US
                 </Link>
               </li>
             </ul>
           </div>
+        </nav>
 
-          {/* Add padding to account for fixed navbar */}
-          <div className="pt-20">
-            <div className="flex-1">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/industries" element={<Industries />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/process" element={<Process />} />
-              </Routes>
-            </div>
-            <Footer />
+        {/* Mobile Navigation */}
+        <div
+          className={`md:hidden bg-white/95 backdrop-blur-sm py-6 px-6 shadow-lg border border-gray-100 transition-all duration-300 ease-in-out transform ${mobileMenuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'} fixed top-24 left-4 right-4 z-40 rounded-lg`}
+        >
+          <ul className='flex flex-col space-y-4'>
+            <li className="border-b border-gray-100 pb-3">
+              <Link
+                to="/about"
+                className="text-gray-700 text-lg font-medium flex items-center hover:text-gray-900 transition-colors duration-300"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
+              </Link>
+            </li>
+            <li className="border-b border-gray-100 pb-3">
+              <Link
+                to="/industries"
+                className="text-gray-700 text-lg font-medium flex items-center hover:text-gray-900 transition-colors duration-300"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Industries
+              </Link>
+            </li>
+            <li className="border-b border-gray-100 pb-3">
+              <Link
+                to="/process"
+                className="text-gray-700 text-lg font-medium flex items-center hover:text-gray-900 transition-colors duration-300"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Working with MLL
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact"
+                className="bg-gray-800 text-white px-6 py-3 font-bold uppercase tracking-wide hover:bg-gray-900 transition-all duration-300 shadow-sm text-center block"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                CONTACT US
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Add padding to account for fixed navbar */}
+        <div className="pt-20">
+          <div className="flex-1">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/industries" element={<Industries />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/process" element={<Process />} />
+            </Routes>
           </div>
+          <Footer />
         </div>
       </div>
+    </div>
   )
 }
 

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Industries = () => {
   return (
     <section className="py-16 md:pt-24 md:pb-24 bg-white" id="industries">
@@ -31,8 +33,8 @@ const Industries = () => {
             </div>
             
             <div className="pt-4">
-              <a 
-                href="#contact" 
+              <Link 
+                to="/process" 
                 className="inline-flex items-center text-lg font-semibold text-blue-600 hover:text-blue-800 transition-colors duration-300 group"
               >
                 Working with MLL Services Inc
@@ -44,7 +46,7 @@ const Industries = () => {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
