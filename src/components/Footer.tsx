@@ -15,10 +15,7 @@ const Footer = () => {
                 Your Partner in Staffing Success.
               </p>
             </div>
-            <div className="flex space-x-4">
-              <SocialLink icon={Facebook} href="#" />
-              <SocialLink icon={Instagram} href="#" />
-            </div>
+            
           </div>
 
           {/* Quick Links */}

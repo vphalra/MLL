@@ -24,11 +24,11 @@ const Industries = () => {
             
             <div className="space-y-4 text-gray-700">
               <p className="text-lg leading-relaxed">
-                At MLL Services Inc., our commitment goes beyond matching talent with opportunities—it's rooted in genuine care for the people we serve. Whether you're a job seeker navigating your career path or an employer building your dream team, we prioritize your unique needs, aspirations, and challenges every step of the way.
+                At MLL Services Inc., our commitment transcends mere talent matching—it's grounded in genuine care for everyone we serve. We prioritize your unique needs, goals, and challenges throughout.
               </p>
               
               <p className="text-lg leading-relaxed">
-                Transparent communication, ethical practices, and a passion for strategic staffing. We prioritize diversity, equity, and inclusion to ensure fair opportunities for all. Your story matters—let's build it together. 
+                We emphasize transparent communication, ethical practices, and strategic staffing, while championing diversity, equity, and inclusion for fair opportunities. Your story matters—let's shape it together. 
               </p>
             </div>
             

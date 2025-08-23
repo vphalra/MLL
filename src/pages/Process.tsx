@@ -25,6 +25,12 @@ const Process = () => {
         </div>
       </section>
 
+      {/* Aesthetic Divider */}
+      <div className="relative h-16 bg-white">
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-800/20 to-white"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent max-w-6xl mx-auto"></div>
+      </div>
+
       {/* Industry Insiders Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-4xl text-center">
@@ -32,20 +38,19 @@ const Process = () => {
             We're the insiders you've been looking for.
           </h2>
           <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
-            Simply put, we're experts in the industries we serve. We speak your language, 
+            Simply put, we're experts in the industries we serve. We speak your language,
             understand your needs, and know exactly what the right fit for an open job looks like.
           </p>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-            We keep our finger on the pulse of the future of talent in your industry—giving you the freedom to 
+            We keep our finger on the pulse of the future of talent in your industry—giving you the freedom to
             enjoy less disruptions, more strategic insights, and more efficiency in your daily operations.
           </p>
           <p className="text-lg text-gray-600 leading-relaxed">
-            We know what really matters in your business as a trusted partner of large and small organizations 
+            We know what really matters in your business as a trusted partner of large and small organizations
             around the world. Let us solve your toughest workforce challenges, so you don't have to.
           </p>
         </div>
       </section>
-
       {/* Solutions Section */}
       <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4 max-w-6xl">
@@ -57,7 +62,6 @@ const Process = () => {
               A seamless extension of your team, making a big impact.
             </h2>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {/* Attracting Talent */}
             <div className="bg-white p-8 rounded-2xl">
@@ -68,8 +72,8 @@ const Process = () => {
               <p className="text-gray-600 mb-6">
                 We search far and wide for the best talent, so you get exactly who you need.
               </p>
-              <a href="#" className="text-gray-800 font-semibold hover:underline flex items-center">
-                Our approach →
+              <a href="/contact" className="text-gray-800 font-semibold hover:underline flex items-center">
+                Talk To an Expert →
               </a>
             </div>
 
@@ -82,8 +86,8 @@ const Process = () => {
               <p className="text-gray-600 mb-6">
                 Leave the details of the vetting process to us. We're experts at it.
               </p>
-              <a href="#" className="text-gray-800 font-semibold hover:underline flex items-center">
-                How we do it →
+              <a href="/contact" className="text-gray-800 font-semibold hover:underline flex items-center">
+                Talk To an Expert →
               </a>
             </div>
 
@@ -96,8 +100,8 @@ const Process = () => {
               <p className="text-gray-600 mb-6">
                 We keep our people safe and your business protected with comprehensive safety programs.
               </p>
-              <a href="#" className="text-gray-800 font-semibold hover:underline flex items-center">
-                Learn more →
+              <a href="/contact" className="text-gray-800 font-semibold hover:underline flex items-center">
+                Talk To an Expert →
               </a>
             </div>
 
@@ -110,13 +114,19 @@ const Process = () => {
               <p className="text-gray-600 mb-6">
                 We believe in taking care of our people with competitive benefits and meaningful perks.
               </p>
-              <a href="#" className="text-gray-800 font-semibold hover:underline flex items-center">
-                See benefits →
+              <a href="/contact" className="text-gray-800 font-semibold hover:underline flex items-center">
+                Talk To an Expert →
               </a>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Aesthetic Divider Above Impact */}
+      <div className="relative h-16 bg-white">
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-800/20 to-white"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent max-w-6xl mx-auto"></div>
+      </div>
 
       {/* Impact Section */}
       <section className="py-20 bg-white">
@@ -129,7 +139,7 @@ const Process = () => {
           </p>
 
           {/* Statistics */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 -mb-10">
             <div className="bg-gray-100 p-8 rounded-2xl">
               <div className="text-4xl md:text-5xl font-bold text-gray-800 mb-2">15+</div>
               <div className="text-lg text-gray-600">years of experience</div>
@@ -148,6 +158,12 @@ const Process = () => {
           </div>
         </div>
       </section>
+
+      {/* Aesthetic Divider Below Impact */}
+      <div className="relative h-16 bg-white">
+        <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-50/50"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent max-w-6xl mx-auto"></div>
+      </div>
 
       {/* Call to Action Section */}
       <section className="py-20 bg-gray-50">
@@ -168,36 +184,8 @@ const Process = () => {
         </div>
       </section>
 
-      {/* Related Resources Section */}
-      <section className="py-20 bg-gray-800">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Related Resources
-              </h2>
-              <p className="text-lg text-gray-300 mb-8">
-                Explore our insights, case studies, and industry expertise to help you make informed workforce decisions.
-              </p>
-              <a href="#" className="text-white font-semibold hover:underline flex items-center">
-                View all resources →
-              </a>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded-xl">
-                <h3 className="text-lg font-semibold text-gray-800 mb-3">Industry Insights</h3>
-                <p className="text-gray-600 text-sm mb-4">Stay ahead with our latest workforce trends and analysis.</p>
-                <a href="#" className="text-gray-800 text-sm hover:underline">Read more →</a>
-              </div>
-              <div className="bg-white p-6 rounded-xl">
-                <h3 className="text-lg font-semibold text-gray-800 mb-3">Success Stories</h3>
-                <p className="text-gray-600 text-sm mb-4">See how we've helped organizations like yours succeed.</p>
-                <a href="#" className="text-gray-800 text-sm hover:underline">View cases →</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    
+      
     </div>
   );
 };

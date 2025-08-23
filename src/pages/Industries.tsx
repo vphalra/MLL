@@ -9,6 +9,31 @@ const industries = [
     description: 'Companies of all sizes, from every industry, have counted on us for the finance and accounting talent they need—and you can too.'
   },
   {
+    icon: Building2,
+    title: 'Construction',
+    description: 'Skilled workers for building projects, from general labor to specialized trades, delivering quality and efficiency on-site.'
+  },
+  {
+    icon: Globe,
+    title: 'Landscaping',
+    description: 'Expert teams for landscape design, maintenance, and installation, transforming outdoor spaces with precision and care.'
+  },
+  {
+    icon: Cog,
+    title: 'General Labor Workforce',
+    description: 'Versatile general labor solutions for various industries, supporting day-to-day operations with dedicated, hardworking personnel.'
+  },
+  {
+    icon: Truck,
+    title: 'Agriculture',
+    description: 'Providing reliable labor for farming, harvesting, and agricultural operations to ensure seasonal success and optimal yields.'
+  },
+  {
+    icon: Users,
+    title: 'Retail',
+    description: 'Providing skilled retail staff for sales, customer service, and store operations to enhance customer experience and drive revenue.'
+  },
+  {
     icon: Phone,
     title: 'Contact Center',
     description: 'We help contact center leaders like you overcome your most pressing challenges, from staffing to workforce management.'
@@ -37,31 +62,6 @@ const industries = [
     icon: Wifi,
     title: 'Telecom',
     description: "The world is wireless now—don't get tangled up in clunky, old digital strategies. Let's connect."
-  },
-  {
-    icon: Truck,
-    title: 'Agriculture',
-    description: 'Providing reliable labor for farming, harvesting, and agricultural operations to ensure seasonal success and optimal yields.'
-  },
-  {
-    icon: Building2,
-    title: 'Construction',
-    description: 'Skilled workers for building projects, from general labor to specialized trades, delivering quality and efficiency on-site.'
-  },
-  {
-    icon: Globe,
-    title: 'Landscaping',
-    description: 'Expert teams for landscape design, maintenance, and installation, transforming outdoor spaces with precision and care.'
-  },
-  {
-    icon: Cog,
-    title: 'General Labor Workforce',
-    description: 'Versatile general labor solutions for various industries, supporting day-to-day operations with dedicated, hardworking personnel.'
-  },
-  {
-    icon: Users,
-    title: 'Retail',
-    description: 'Providing skilled retail staff for sales, customer service, and store operations to enhance customer experience and drive revenue.'
   }
 ];
 
@@ -115,15 +115,21 @@ const Industries = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="bg-gray-800 text-white p-12 rounded-lg">
+            <div className="bg-gray-800 text-white p-12 rounded-lg relative">
               <div className="mb-6">
                 <span className="inline-block bg-white text-gray-800 text-sm font-semibold px-3 py-1 rounded mb-4">
                   SOLUTIONS
                 </span>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold mb-10">
                   Connect with the right talent, at the right time.
                 </h2>
+                <p>
+                  "Teamwork is the ability to work together toward a common vision, the ability to direct individual accomplishments toward organizational objectives. It is the fuel that allows common people to attain uncommon results." <br></br><br></br>-Andrew Carnegie
+                </p>
               </div>
+              <Link to="/contact" className="absolute bottom-4 right-4 bg-gray-800 text-white px-6 py-3 rounded font-semibold inline-block">
+                Get Started Now →
+              </Link>
             </div>
             <div className="space-y-8">
               <div className="bg-white p-8 rounded-lg border border-gray-200">
@@ -186,7 +192,7 @@ const Industries = () => {
                 We're experts at connecting you with the right talent solutions. Contact us to explore options that fit your unique needs.
               </p>
               <Link to="/contact" className="bg-gray-800 text-white px-6 py-3 rounded font-semibold hover:bg-gray-900 transition-colors inline-block">
-                REQUEST CONSULTATION
+                Request Consultation
               </Link>
             </div>
           </div>
