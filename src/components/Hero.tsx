@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
         <p className={`text-base sm:text-lg md:text-xl mt-4 sm:mt-5 md:mt-6 mb-5 sm:mb-6 md:mb-7 max-w-2xl mx-auto transition-all duration-600 ease-in-out ${
           animationStage >= 3 ? 'opacity-90 translate-y-0' : 'opacity-0 translate-y-4'
         } font-dmserif`}>
-          Empowering Your Business with the Right People
+          Empowering Your Business Through Strategic Staffing
         </p>
         
         <div className={`flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 transition-all duration-600 ease-in-out ${
