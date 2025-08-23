@@ -35,7 +35,7 @@ const Industries = () => {
             <div className="pt-4">
               <Link 
                 to="/process" 
-                className="inline-flex items-center text-lg font-semibold text-blue-600 hover:text-blue-800 transition-colors duration-300 group"
+                className="inline-flex items-center text-lg font-semibold text-blue-800 hover:text-blue-800 transition-colors duration-300 group"
               >
                 Working with MLL Services Inc
                 <svg 

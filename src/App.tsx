@@ -151,10 +151,10 @@ function Home() {
 
       <div className="bg-gray-800 py-12 md:py-16">
         <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 md:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-white mb-8 md:mb-10 font-sans">
+          <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-white mb-8 md:mb-10">
             Ready to find the perfect workforce solution?
           </h2>
-          <Link to="/contact" className="bg-white text-gray-800 font-semibold px-6 md:px-8 py-3 md:py-4 rounded-lg hover:bg-gray-100 transition-colors duration-300 text-base md:text-lg font-sans">
+          <Link to="/contact" className="bg-white text-gray-800 font-semibold px-6 md:px-8 py-3 md:py-4 rounded-lg hover:bg-gray-100 transition-colors duration-300 text-base md:text-lg font-sora">
             CONTACT US
           </Link>
         </div>
@@ -245,7 +245,7 @@ function AppContent({ mobileMenuOpen, toggleMobileMenu, setMobileMenuOpen }: { m
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="bg-gray-800 text-white px-6 py-2 font-bold uppercase tracking-wide hover:bg-gray-900 transition-all duration-300 shadow-sm hover:shadow-md">
+                <Link to="/contact" className="bg-gray-800 text-white px-6 py-2 font-sora uppercase tracking-wide hover:bg-gray-900 transition-all duration-300 shadow-sm hover:shadow-md">
                   CONTACT US
                 </Link>
               </li>
@@ -288,7 +288,7 @@ function AppContent({ mobileMenuOpen, toggleMobileMenu, setMobileMenuOpen }: { m
             <li>
               <Link
                 to="/contact"
-                className="bg-gray-800 text-white px-6 py-3 font-bold uppercase tracking-wide hover:bg-gray-900 transition-all duration-300 shadow-sm text-center block"
+                className="bg-gray-800 text-white px-6 py-3 font-bold uppercase tracking-wide hover:bg-gray-900 transition-all duration-300 shadow-sm text-center block font-sora"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 CONTACT US

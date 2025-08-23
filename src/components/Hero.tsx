@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
   return (
     <div className="hero-section min-h-[90vh] md:h-screen flex items-center justify-center px-4 py-8 md:py-0">
       <div className="hero-content text-center text-white max-w-3xl mx-auto flex flex-col items-center">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold h-12 sm:h-16 md:h-20 flex items-center justify-center font-dmserif">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold h-12 sm:h-14 md:h-18 flex items-center justify-center font-dmserif">
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0">
             <span
               className={`inline-block transition-all duration-600 ease-in-out ${
@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
           </Link>
           <Link
             to="/about"
-            className="border-2 border-white px-6 py-3 rounded-md font-medium hover:bg-white hover:bg-opacity-10 transition-all w-full sm:w-auto text-center transform hover:scale-105 font-dmserif"
+            className="border-2 border-white px-6 py-3 rounded-md font-medium hover:bg-white/10 transition-all w-full sm:w-auto text-center transform hover:scale-105 font-dmserif"
           >
             Learn More
           </Link>
