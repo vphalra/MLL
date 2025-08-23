@@ -17,8 +17,8 @@ const Hero: React.FC = () => {
   return (
     <div className="hero-section min-h-[90vh] md:h-screen flex items-center justify-center px-4 py-8 md:py-0">
       <div className="hero-content text-center text-white max-w-3xl mx-auto flex flex-col items-center">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold h-12 sm:h-14 md:h-18 flex items-center justify-center font-dmserif">
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold flex items-center justify-center font-dmserif">
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-0 sm:space-y-0">
             <span
               className={`inline-block transition-all duration-600 ease-in-out ${
                 animationStage >= 1 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-0'
@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
             </span>
             {'\u00A0'}
             <span
-              className={`inline-block transition-all duration-600 ease-in-out ${
+              className={`inline-block transition-all duration-600 ease-in-out -mt-6 sm:mt-0 ${
                 animationStage >= 2 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full'
               }`}
               style={{ whiteSpace: 'nowrap' }}
@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
           </div>
         </h1>
         
-        <p className={`text-base sm:text-lg md:text-xl mt-8 sm:mt-5 md:mt-6 mb-5 sm:mb-6 md:mb-7 max-w-2xl mx-auto transition-all duration-600 ease-in-out ${
+        <p className={`text-base sm:text-lg md:text-xl mt-4 sm:mt-5 md:mt-6 mb-5 sm:mb-6 md:mb-7 max-w-2xl mx-auto transition-all duration-600 ease-in-out ${
           animationStage >= 3 ? 'opacity-90 translate-y-0' : 'opacity-0 translate-y-4'
         } font-dmserif`}>
           Empowering Your Business with the Right People

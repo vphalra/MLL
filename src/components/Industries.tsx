@@ -19,16 +19,16 @@ const Industries = () => {
           {/* Right side - Content */}
           <div className="order-1 lg:order-2 space-y-6">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-              Bringing expertise together with real partnership.
+              We Care About You.
             </h2>
             
             <div className="space-y-4 text-gray-700">
               <p className="text-lg leading-relaxed">
-                We believe the impact of the right job on your life is limitless. And for employers, the effect of the right talent on your business, at the right time, is just as big.
+                At MLL Services Inc., our commitment goes beyond matching talent with opportunities—it's rooted in genuine care for the people we serve. Whether you're a job seeker navigating your career path or an employer building your dream team, we prioritize your unique needs, aspirations, and challenges every step of the way.
               </p>
               
               <p className="text-lg leading-relaxed">
-                That's how we excel: by connecting people with great work that improves their lives, while also driving the success of the companies they choose. We bring it all together like no one else can.
+                Transparent communication, ethical practices, and a passion for strategic staffing. We prioritize diversity, equity, and inclusion to ensure fair opportunities for all. Your story matters—let's build it together. 
               </p>
             </div>
             

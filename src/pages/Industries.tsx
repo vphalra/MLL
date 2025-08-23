@@ -4,14 +4,9 @@ import { Link } from 'react-router-dom';
 
 const industries = [
   {
-    icon: Building2,
-    title: 'Administrative & Office',
-    description: 'Get connected to innovative solutions and highly skilled office professionals who will keep your organization running smoothly.'
-  },
-  {
     icon: Calculator,
     title: 'Accounting & Finance',
-    description: 'Companies of all sizes, from every industry, have counted on Kelly for the finance and accounting talent they need—and you can too.'
+    description: 'Companies of all sizes, from every industry, have counted on us for the finance and accounting talent they need—and you can too.'
   },
   {
     icon: Phone,
@@ -29,24 +24,9 @@ const industries = [
     description: "It's time for a new plan. Connect with us for engineering talent and solutions that will transform your organization."
   },
   {
-    icon: Globe,
-    title: 'Government',
-    description: 'No matter how complex your government requirements are, our specialized talent is ready to go to work for you.'
-  },
-  {
-    icon: Cog,
-    title: 'Manufacturing',
-    description: 'Get the latest technical skills and well-qualified fit for your manufacturing and production teams.'
-  },
-  {
     icon: Users,
     title: 'Science & Clinical',
     description: "Science never stops evolving—and neither should you. We've got the experts and solutions you need to keep up."
-  },
-  {
-    icon: Cpu,
-    title: 'Semiconductor',
-    description: 'Unlock the growth potential of your semiconductor business with a skilled, sustainable workforce.'
   },
   {
     icon: Cpu,
@@ -60,8 +40,28 @@ const industries = [
   },
   {
     icon: Truck,
-    title: 'Warehouse & Distribution',
-    description: 'From forklift drivers to pick-and-pack workers, we know all about the hardworking talent that keeps our world in motion.'
+    title: 'Agriculture',
+    description: 'Providing reliable labor for farming, harvesting, and agricultural operations to ensure seasonal success and optimal yields.'
+  },
+  {
+    icon: Building2,
+    title: 'Construction',
+    description: 'Skilled workers for building projects, from general labor to specialized trades, delivering quality and efficiency on-site.'
+  },
+  {
+    icon: Globe,
+    title: 'Landscaping',
+    description: 'Expert teams for landscape design, maintenance, and installation, transforming outdoor spaces with precision and care.'
+  },
+  {
+    icon: Cog,
+    title: 'General Labor Workforce',
+    description: 'Versatile general labor solutions for various industries, supporting day-to-day operations with dedicated, hardworking personnel.'
+  },
+  {
+    icon: Users,
+    title: 'Retail',
+    description: 'Providing skilled retail staff for sales, customer service, and store operations to enhance customer experience and drive revenue.'
   }
 ];
 
