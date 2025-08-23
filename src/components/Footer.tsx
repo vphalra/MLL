@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Facebook, Instagram } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import mllLogo from '../assets/MLL-2.png';
 
@@ -78,14 +78,5 @@ const Footer = () => {
     </footer>
   );
 };
-
-const SocialLink = ({ icon: Icon, href }: { icon: any; href: string }) => (
-  <a
-    href={href}
-    className="bg-gray-100 hover:bg-gray-200 p-2 rounded-lg transition-colors duration-300"
-  >
-    <Icon className="h-4 w-4 md:h-5 md:w-5 text-gray-600 hover:text-gray-900 transition-colors duration-300" />
-  </a>
-);
 
 export default Footer;
