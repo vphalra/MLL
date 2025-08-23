@@ -1,11 +1,14 @@
 // Removed React import
 
 const industries = [
-  'Manufacturing',
+  'General Labor Workforce',
   'Agriculture',
-  'Textile',
-  'Chemical',
+  'Landscaping',
   'Construction',
+  'Accounting & Finance',
+  'Retail',
+  'Contact Center',
+  'Others (Please Specify)'
 ];
 
 const employmentTypes = [

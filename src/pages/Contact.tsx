@@ -3,11 +3,14 @@ import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 const industries = [
-  'Manufacturing',
+  'General Labor Workforce',
   'Agriculture',
-  'Textile',
-  'Chemical',
+  'Landscaping',
   'Construction',
+  'Accounting & Finance',
+  'Retail',
+  'Contact Center',
+  'Others (Please Specify)'
 ];
 
 interface FormData {

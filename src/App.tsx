@@ -114,7 +114,7 @@ function Home() {
                   On-site Workforce Management
                 </h2>
                 <p className="text-sm sm:text-base md:text-lg mb-5 sm:mb-6 md:mb-8 leading-relaxed opacity-90">
-                  Looking to minimize daily challenges related to recruiting, onboarding, retention, and scheduling? As an on-site workforce partner, MLL Services Inc. helps handle these critical processes with expertise, ensuring seamless operations and allowing you to focus on driving your business forward. 
+                  Looking to minimize daily challenges related to recruiting, onboarding, retention, and scheduling? As an on-site workforce partner, MLL Services Inc. helps handle these critical processes with expertise, ensuring seamless operations and allowing you to focus on driving your business forward.
                 </p>
                 <Link to="/industries" className="bg-gray-800 text-white font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg hover:bg-blue-900 transition-colors duration-300 text-sm md:text-base">
                   On-Site Solutions
@@ -245,8 +245,8 @@ function AppContent({ mobileMenuOpen, toggleMobileMenu, setMobileMenuOpen }: { m
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="bg-gray-800 text-white px-6 py-2 font-sora uppercase tracking-wide hover:bg-gray-900 transition-all duration-300 shadow-sm hover:shadow-md">
-                  CONTACT US
+                <Link to="/contact" className="bg-gray-800 text-white px-6 py-2 uppercase tracking-wide hover:bg-gray-900 transition-all duration-300 shadow-sm hover:shadow-md font-sora">
+                  Contact Us
                 </Link>
               </li>
             </ul>
@@ -288,10 +288,10 @@ function AppContent({ mobileMenuOpen, toggleMobileMenu, setMobileMenuOpen }: { m
             <li>
               <Link
                 to="/contact"
-                className="bg-gray-800 text-white px-6 py-3 font-bold uppercase tracking-wide hover:bg-gray-900 transition-all duration-300 shadow-sm text-center block font-sora"
+                className="bg-gray-800 text-white px-6 py-3 font-bold uppercase tracking-wide hover:bg-gray-900 transition-all duration-300 shadow-sm text-center block !font-sora"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                CONTACT US
+                Contact Us
               </Link>
             </li>
           </ul>
