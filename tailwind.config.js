@@ -10,7 +10,7 @@ export default {
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
         courierprime: ['CourierPrime', 'monospace'],
-        dmserif: ['"DM Serif Text"', 'serif'],
+        poiret: ['Poiret One', 'sans-serif'],
       },
     },
   },

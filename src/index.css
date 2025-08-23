@@ -47,3 +47,24 @@ html {
   font-weight: 400;
   font-style: normal;
 }
+
+.poiret-one-regular {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poiret One', sans-serif;
+  font-weight: 400; /* Poiret One is only available in regular weight, so no bold—use letter-spacing or size for emphasis */
+}
+
+.dosis-v32-latin {
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200 800;  /* Variable weight range; adjust if you selected specific weights */
+  font-style: normal;
+}
+body {
+  font-family: 'Dosis', sans-serif;
+}

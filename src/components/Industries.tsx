@@ -9,7 +9,7 @@ const Industries = () => {
           <div className="order-2 lg:order-1">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                src="https://imgur.com/ihUWgKl.jpg" 
                 alt="Professional team collaboration and partnership" 
                 className="w-full h-[400px] md:h-[500px] object-cover"
               />

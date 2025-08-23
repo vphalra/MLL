@@ -10,27 +10,27 @@ interface Industry {
 const industries: Industry[] = [
   {
     id: 1,
-    name: 'Telecom',
-    category: 'Technology & Communications',
-    image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&h=600'
+    name: 'Agriculture',
+    category: 'Agriculture & Farming Workforce',
+    image: 'https://imgur.com/c0obVt4.jpg'
   },
   {
     id: 2,
-    name: 'Warehouse & Distribution',
-    category: 'Logistics & Supply Chain',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&h=600'
+    name: 'Construction',
+    category: 'Construction Workforce',
+    image: 'https://imgur.com/pUEnMx4.jpg'
   },
   {
     id: 3,
-    name: 'Accounting & Finance',
-    category: 'Professional Services',
-    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&h=600'
+    name: 'Landscaping',
+    category: 'Professional Landscapers',
+    image: 'https://imgur.com/mvhVUpj.jpg'
   },
   {
     id: 4,
-    name: 'Healthcare',
-    category: 'Medical & Healthcare',
-    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&h=600'
+    name: 'Labor Workforce',
+    category: 'General Labor Workforce',
+    image: 'https://imgur.com/Tac0Rs6.jpg'
   },
   {
     id: 5,
