@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, Users, Cog, GraduationCap, Phone, Calculator, Wrench, Globe, Cpu, Wifi, Truck } from 'lucide-react';
+import { TreePalm, Building2, Users, Cog, GraduationCap, Phone, Calculator, Wrench, Trees, Cpu, Wifi, UserRoundCog  } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const industries = [
@@ -14,17 +14,17 @@ const industries = [
     description: 'Skilled workers for building projects, from general labor to specialized trades, delivering quality and efficiency on-site.'
   },
   {
-    icon: Globe,
+    icon: Trees,
     title: 'Landscaping',
     description: 'Expert teams for landscape design, maintenance, and installation, transforming outdoor spaces with precision and care.'
   },
   {
-    icon: Cog,
+    icon: UserRoundCog,
     title: 'General Labor Workforce',
     description: 'Versatile general labor solutions for various industries, supporting day-to-day operations with dedicated, hardworking personnel.'
   },
   {
-    icon: Truck,
+    icon: TreePalm,
     title: 'Agriculture',
     description: 'Providing reliable labor for farming, harvesting, and agricultural operations to ensure seasonal success and optimal yields.'
   },
