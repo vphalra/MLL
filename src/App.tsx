@@ -256,7 +256,7 @@ function AppContent({ mobileMenuOpen, toggleMobileMenu, setMobileMenuOpen }: { m
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="bg-gray-800 text-white px-6 py-2 uppercase tracking-wide hover:bg-gray-900 transition-all duration-300 shadow-sm hover:shadow-md font-sora">
+                <Link to="/contact" className="bg-gray-800 text-white px-6 py-2 tracking-wide hover:bg-gray-900 transition-all duration-300 shadow-sm hover:shadow-md font-sora">
                   Contact Us
                 </Link>
               </li>
@@ -299,7 +299,7 @@ function AppContent({ mobileMenuOpen, toggleMobileMenu, setMobileMenuOpen }: { m
             <li>
               <Link
                 to="/contact"
-                className="bg-gray-800 text-white px-6 py-3 font-bold uppercase tracking-wide hover:bg-gray-900 transition-all duration-300 shadow-sm text-center block !font-sora"
+                className="bg-gray-800 text-white px-6 py-3 tracking-wide hover:bg-gray-900 transition-all duration-300 shadow-sm text-center block !font-sora"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact Us

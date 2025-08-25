@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import 'tailwindcss';
 
+/* Headers */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "DM Serif Text", sans-serif;
+  font-weight: 400; /* Poiret One is only available in regular weight, so no bold—use letter-spacing or size for emphasis */
+}
+
+/* Body Font*/
+body {
+  font-family: "Sora", sans-serif;
+}
+
 
 html {
   scroll-behavior: smooth;
@@ -54,19 +66,13 @@ html {
   font-style: normal;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "DM Serif Text", sans-serif;
-  font-weight: 400; /* Poiret One is only available in regular weight, so no bold—use letter-spacing or size for emphasis */
-}
+
 
 .dosis-v32-latin {
   font-family: "Dosis", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200 800;  /* Variable weight range; adjust if you selected specific weights */
   font-style: normal;
-}
-body {
-  font-family: "Sora", sans-serif;
 }
 
 
@@ -102,4 +108,14 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+/* For the desktop navbar button */
+nav {
+  font-family: 'Sora', sans-serif !important; /* Use !important if Tailwind overrides it */
+}
+
+/* For the mobile navbar button */
+nav {
+  font-family: 'Sora', sans-serif !important;
 }
