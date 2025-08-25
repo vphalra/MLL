@@ -1,5 +1,5 @@
 import React from 'react';
-import { TreePalm, Building2, Users, Cog, GraduationCap, Phone, Calculator, Wrench, Trees, Cpu, Wifi, UserRoundCog  } from 'lucide-react';
+import { TreePalm, Building2, Users, GraduationCap, Phone, Calculator, Wrench, Trees, Cpu, Wifi, UserRoundCog  } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const industries = [
