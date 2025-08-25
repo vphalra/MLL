@@ -32,7 +32,7 @@ const About = () => {
               Who are we?
             </h1>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed opacity-90">
-              MLL Services Inc. is proud to set the standard for excellence in temporary workforce management.
+              MLL Services Inc. is proud to set the standard for excellence in staffing solutions & workforce management.
             </p>
           </div>
           <div className="relative">
