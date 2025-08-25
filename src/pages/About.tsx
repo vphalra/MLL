@@ -31,7 +31,7 @@ const About = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
               Who are we?
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed opacity-90">
               MLL Services Inc. is proud to set the standard for excellence in temporary workforce management.
             </p>
           </div>
@@ -51,7 +51,7 @@ const About = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
             Our Mission
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-8 leading-relaxed opacity-90">
             To deliver swift, precise staffing solutions that meet the evolving needs of businesses. Prioritizing your productivity and success.
           </p>
         </div>
@@ -64,7 +64,7 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               How We Deliver Excellence
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed opacity-90">
               Our comprehensive approach ensures that every client receives tailored solutions that address their unique challenges and drive measurable results.
             </p>
           </div>
@@ -73,7 +73,7 @@ const About = () => {
               <div key={feature.title} className="bg-gray-50 rounded-lg p-8 text-center border border-gray-200">
                 {React.createElement(feature.icon, { className: 'h-12 w-12 text-gray-700 mx-auto mb-4' })}
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed opacity-90">
                   {feature.description}
                 </p>
               </div>
@@ -93,7 +93,7 @@ const About = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Get in Touch With Us Now
           </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed opacity-90">
             Ready to elevate your staffing solutions? Contact us today to discuss how we can support your business needs.
           </p>
           <Link

@@ -11,7 +11,7 @@ const Process = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
               Working with MLL
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed opacity-90">
               The impact of the right talent on your business is limitless.
             </p>
           </div>
@@ -37,15 +37,15 @@ const Process = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
             We're the insiders you've been looking for.
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-8 leading-relaxed opacity-90">
             Simply put, we're experts in the industries we serve. We speak your language,
             understand your needs, and know exactly what the right fit for an open job looks like.
           </p>
-          <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-8 leading-relaxed opacity-90">
             We keep our finger on the pulse of the future of talent in your industry—giving you the freedom to
             enjoy less disruptions, more strategic insights, and more efficiency in your daily operations.
           </p>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed opacity-90">
             We know what really matters in your business as a trusted partner of large and small organizations
             around the world. Let us solve your toughest workforce challenges, so you don't have to.
           </p>
@@ -69,12 +69,12 @@ const Process = () => {
                 <Search className="w-8 h-8 text-gray-800 mr-3" />
                 <h3 className="text-2xl font-bold text-gray-800">Attracting Talent</h3>
               </div>
-              <p className="text-gray-600 mb-6">
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 leading-relaxed opacity-90">
                 We search far and wide for the best talent, so you get exactly who you need.
               </p>
-              <a href="/contact" className="text-gray-800 font-semibold hover:underline flex items-center">
+              <Link to="/contact" className="text-gray-800 font-semibold hover:underline flex items-center">
                 Talk To an Expert →
-              </a>
+              </Link>
             </div>
 
             {/* Screening and Hiring */}
@@ -83,12 +83,12 @@ const Process = () => {
                 <UserCheck className="w-8 h-8 text-gray-800 mr-3" />
                 <h3 className="text-2xl font-bold text-gray-800">Screening and Hiring</h3>
               </div>
-              <p className="text-gray-600 mb-6">
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 leading-relaxed opacity-90">
                 Leave the details of the vetting process to us. We're experts at it.
               </p>
-              <a href="/contact" className="text-gray-800 font-semibold hover:underline flex items-center">
+              <Link to="/contact" className="text-gray-800 font-semibold hover:underline flex items-center">
                 Talk To an Expert →
-              </a>
+              </Link>
             </div>
 
             {/* Safety */}
@@ -97,12 +97,12 @@ const Process = () => {
                 <Shield className="w-8 h-8 text-gray-800 mr-3" />
                 <h3 className="text-2xl font-bold text-gray-800">Safety</h3>
               </div>
-              <p className="text-gray-600 mb-6">
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 leading-relaxed opacity-90">
                 We keep our people safe and your business protected with comprehensive safety programs.
               </p>
-              <a href="/contact" className="text-gray-800 font-semibold hover:underline flex items-center">
+              <Link to="/contact" className="text-gray-800 font-semibold hover:underline flex items-center">
                 Talk To an Expert →
-              </a>
+              </Link>
             </div>
 
             {/* Benefits and Perks */}
@@ -111,12 +111,12 @@ const Process = () => {
                 <Award className="w-8 h-8 text-gray-800 mr-3" />
                 <h3 className="text-2xl font-bold text-gray-800">Benefits and Perks</h3>
               </div>
-              <p className="text-gray-600 mb-6">
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 leading-relaxed opacity-90">
                 We believe in taking care of our people with competitive benefits and meaningful perks.
               </p>
-              <a href="/contact" className="text-gray-800 font-semibold hover:underline flex items-center">
+              <Link to="/contact" className="text-gray-800 font-semibold hover:underline flex items-center">
                 Talk To an Expert →
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -134,7 +134,7 @@ const Process = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
             We break down barriers every day to help people connect with meaningful work.
           </h2>
-          <p className="text-lg text-gray-600 mb-16 max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-16 max-w-3xl mx-auto leading-relaxed opacity-90">
             At the same time, we're solving workforce challenges for thriving companies everywhere.
           </p>
 
@@ -142,18 +142,18 @@ const Process = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 -mb-10">
             <div className="bg-gray-100 p-8 rounded-2xl">
               <div className="text-4xl md:text-5xl font-bold text-gray-800 mb-2">15+</div>
-              <div className="text-lg text-gray-600">years of experience</div>
-              <div className="text-lg text-gray-600">as the industry founder</div>
+              <div className="text-sm sm:text-base md:text-lg text-gray-600">years of experience</div>
+              <div className="text-sm sm:text-base md:text-lg text-gray-600">as the industry founder</div>
             </div>
             <div className="bg-gray-800 p-8 rounded-2xl">
               <div className="text-4xl md:text-5xl font-bold text-white mb-2">500K+</div>
-              <div className="text-lg text-white">people directly employed</div>
-              <div className="text-lg text-white">by us around the world</div>
+              <div className="text-sm sm:text-base md:text-lg text-white">people directly employed</div>
+              <div className="text-sm sm:text-base md:text-lg text-white">by us around the world</div>
             </div>
             <div className="bg-gray-200 p-8 rounded-2xl">
               <div className="text-4xl md:text-5xl font-bold text-gray-800 mb-2">85%</div>
-              <div className="text-lg text-gray-600">of the Fortune 100</div>
-              <div className="text-lg text-gray-600">partner with us</div>
+              <div className="text-sm sm:text-base md:text-lg text-gray-600">of the Fortune 100</div>
+              <div className="text-sm sm:text-base md:text-lg text-gray-600">partner with us</div>
             </div>
           </div>
         </div>
@@ -172,7 +172,7 @@ const Process = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
               Ready to move your organization forward?
             </h2>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed opacity-90">
               We believe in limitless opportunities for your business. Let's discuss how we can help you achieve your workforce goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

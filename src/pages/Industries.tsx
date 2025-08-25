@@ -101,7 +101,7 @@ const Industries = () => {
                     <h3 className="text-lg font-semibold text-gray-800 mb-3">
                       {industry.title}
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed opacity-90">
                       {industry.description}
                     </p>
                   </div>
@@ -123,7 +123,7 @@ const Industries = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-10">
                   Connect with the right talent, at the right time.
                 </h2>
-                <p>
+                <p className="text-sm sm:text-base md:text-lg leading-relaxed opacity-90">
                   "Teamwork is the ability to work together toward a common vision, the ability to direct individual accomplishments toward organizational objectives. It is the fuel that allows common people to attain uncommon results." <br></br><br></br>-Andrew Carnegie
                 </p>
               </div>
@@ -136,7 +136,7 @@ const Industries = () => {
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">
                   Temporary Staffing
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-4 leading-relaxed opacity-90">
                   Get top talent—when you need it—from the #1 temporary staffing agency in the U.S.
                 </p>
                 <Link to="/contact" className="text-gray-800 font-semibold hover:text-gray-900 transition-colors">
@@ -147,7 +147,7 @@ const Industries = () => {
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">
                   Direct Hire
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-4 leading-relaxed opacity-90">
                   Reduce recruiting time and costs while you secure a long-term fit for your organization.
                 </p>
                 <Link to="/process" className="text-gray-800 font-semibold hover:text-gray-900 transition-colors">
@@ -166,7 +166,7 @@ const Industries = () => {
               <h3 className="text-2xl font-bold text-gray-800 mb-4">
                 Business Process Outsourcing
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 leading-relaxed opacity-90">
                 Get project management and talent retention practices in one solution.
               </p>
               <Link to="/contact" className="text-gray-800 font-semibold hover:text-gray-900 transition-colors">
@@ -177,7 +177,7 @@ const Industries = () => {
               <h3 className="text-2xl font-bold text-gray-800 mb-4">
                 Skilled Professional Solutions
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 leading-relaxed opacity-90">
                 Secure quality talent and a consistent workflow through the duration of a project.
               </p>
               <Link to="/about" className="text-gray-800 font-semibold hover:text-gray-900 transition-colors">
@@ -188,7 +188,7 @@ const Industries = () => {
               <h3 className="text-2xl font-bold text-gray-800 mb-4">
                 Find the perfect fit.
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 leading-relaxed opacity-90">
                 We're experts at connecting you with the right talent solutions. Contact us to explore options that fit your unique needs.
               </p>
               <Link to="/contact" className="bg-gray-800 text-white px-6 py-3 rounded font-semibold hover:bg-gray-900 transition-colors inline-block">

@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <div className="hero-section min-h-[90vh] md:h-screen flex items-center justify-center px-4 py-8 md:py-0">
+    <div className="hero-section min-h-[90vh] md:h-screen flex items-center justify-center px-2 py-8 md:py-0">
       <div className="hero-content text-center text-white max-w-3xl mx-auto flex flex-col items-center">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold flex items-center justify-center font-dmserif">
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-0 sm:space-y-0">

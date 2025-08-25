@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Industries = () => {
   return (
-    <section className="py-16 md:pt-24 md:pb-24 bg-white" id="industries">
+    <section className="pt-8 pb-16 md:pt-24 md:pb-24 bg-white" id="industries">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left side - Image */}
@@ -18,16 +18,16 @@ const Industries = () => {
           
           {/* Right side - Content */}
           <div className="order-1 lg:order-2 space-y-6">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-              We Care About You.
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+              Talent Matching, Rooted in Care.
             </h2>
             
             <div className="space-y-4 text-gray-700">
-              <p className="text-lg leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed opacity-90">
                 At MLL Services Inc., our commitment transcends mere talent matching—it's grounded in genuine care for everyone we serve. We prioritize your unique needs, goals, and challenges throughout.
               </p>
               
-              <p className="text-lg leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed opacity-90">
                 We emphasize transparent communication, ethical practices, and strategic staffing, while championing diversity, equity, and inclusion for fair opportunities. Your story matters—let's shape it together. 
               </p>
             </div>
@@ -37,7 +37,7 @@ const Industries = () => {
                 to="/process" 
                 className="inline-flex items-center text-lg font-semibold text-blue-800 hover:text-blue-800 transition-colors duration-300 group"
               >
-                Working with MLL Services Inc
+                Working with MLL Services Inc.
                 <svg 
                   className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
                   fill="none" 
