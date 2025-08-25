@@ -99,7 +99,7 @@ function Home() {
                 <p className="text-sm sm:text-base md:text-lg mb-10 sm:mb-6 md:mb-8 leading-relaxed opacity-90">
                   Whether you need temporary workers for seasonal demands, special projects, or extended absences, we have the people you've been looking for — pre-screened, trained, and ready to get to work. Discover why we were named the #1 temporary staffing agency in the U.S. by Forbes.
                 </p>
-                <Link to="/industries" className="bg-white text-gray-800 font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg hover:bg-gray-100 transition-colors duration-300 text-sm md:text-base">
+                <Link to="/industries" className="bg-white text-gray-800 font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg hover:bg-gray-100 transition-colors duration-300 text-sm md:text-base mb-4 lg:mb-0">
                   Staffing Solutions
                 </Link>
               </div>
@@ -121,7 +121,7 @@ function Home() {
                 <p className="text-sm sm:text-base md:text-lg mb-10 sm:mb-6 md:mb-8 leading-relaxed opacity-90">
                   Looking to minimize daily challenges related to recruiting, onboarding, retention, and scheduling? As an on-site workforce partner, MLL Services Inc. helps handle these critical processes with expertise, ensuring seamless operations and allowing you to focus on driving your business forward.
                 </p>
-                <Link to="/industries" className="bg-gray-800 text-white font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg hover:bg-blue-900 transition-colors duration-300 text-sm md:text-base">
+                <Link to="/industries" className="bg-gray-800 text-white font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg hover:bg-blue-900 transition-colors duration-300 text-sm md:text-base mb-4 lg:mb-0">
                   On-Site Solutions
                 </Link>
               </div>
@@ -138,11 +138,13 @@ function Home() {
           </div>
         </div>
       </div>
+      
       {/* Aesthetic Divider */}
       <div className="relative h-16 bg-white">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-800/20 to-white"></div>
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent max-w-6xl mx-auto"></div>
       </div>
+      
       {/* Industries We Serve Section */}
       <div className="bg-white pt-8 pb-16 md:pt-24 md:pb-24">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
@@ -270,7 +272,7 @@ function AppContent({ mobileMenuOpen, toggleMobileMenu, setMobileMenuOpen }: { m
             <li className="border-b border-gray-100 pb-3">
               <Link
                 to="/about"
-                className="text-gray-700 text-lg font-medium flex items-center hover:text-gray-900 transition-colors duration-300"
+                className="text-gray-700 text-sm md:text-base font-medium flex items-center hover:text-gray-900 transition-colors duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
@@ -279,7 +281,7 @@ function AppContent({ mobileMenuOpen, toggleMobileMenu, setMobileMenuOpen }: { m
             <li className="border-b border-gray-100 pb-3">
               <Link
                 to="/industries"
-                className="text-gray-700 text-lg font-medium flex items-center hover:text-gray-900 transition-colors duration-300"
+                className="text-gray-700 text-sm md:text-base font-medium flex items-center hover:text-gray-900 transition-colors duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Industries
@@ -288,7 +290,7 @@ function AppContent({ mobileMenuOpen, toggleMobileMenu, setMobileMenuOpen }: { m
             <li className="border-b border-gray-100 pb-3">
               <Link
                 to="/process"
-                className="text-gray-700 text-lg font-medium flex items-center hover:text-gray-900 transition-colors duration-300"
+                className="text-gray-700 text-sm md:text-base font-medium flex items-center hover:text-gray-900 transition-colors duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Working with MLL

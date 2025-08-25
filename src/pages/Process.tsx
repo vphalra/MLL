@@ -139,7 +139,7 @@ const Process = () => {
           </p>
 
           {/* Statistics */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 -mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 -mb-20">
             <div className="bg-gray-100 p-8 rounded-2xl">
               <div className="text-4xl md:text-5xl font-bold text-gray-800 mb-2">15+</div>
               <div className="text-sm sm:text-base md:text-lg text-gray-600">years of experience</div>

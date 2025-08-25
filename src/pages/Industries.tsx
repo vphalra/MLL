@@ -86,7 +86,7 @@ const Industries = () => {
         </div>
       </section>
       {/* Industries Grid Section */}
-      <section className="py-20 bg-white">
+      <section className="pt-20 pb-10 md:pb-20 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {industries.map((industry) => (
@@ -111,8 +111,15 @@ const Industries = () => {
           </div>
         </div>
       </section>
+
+      {/* Aesthetic Divider */}
+      <div className="relative h-16 bg-white">
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-800/20 to-white"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent max-w-6xl mx-auto"></div>
+      </div>
+
       {/* Solutions Section */}
-      <section className="py-20 bg-white">
+      <section className="py-10 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="bg-gray-800 text-white p-12 rounded-lg relative">
@@ -158,8 +165,15 @@ const Industries = () => {
           </div>
         </div>
       </section>
+
+      {/* Aesthetic Divider */}
+      <div className="relative h-16 bg-white">
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-800/20 to-white"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent max-w-6xl mx-auto"></div>
+      </div>
+
       {/* Additional Services Section */}
-      <section className="py-20 bg-white">
+      <section className="py-10 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 border border-gray-200 rounded-lg">

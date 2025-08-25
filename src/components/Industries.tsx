@@ -32,10 +32,10 @@ const Industries = () => {
               </p>
             </div>
             
-            <div className="pt-4">
+            <div className="-pt-5">
               <Link 
                 to="/process" 
-                className="inline-flex items-center text-lg font-semibold text-blue-800 hover:text-blue-800 transition-colors duration-300 group"
+                className="inline-flex items-center text-sm md:text-base font-semibold text-blue-800 hover:text-blue-800 transition-colors duration-300 group"
               >
                 Working with MLL Services Inc.
                 <svg 

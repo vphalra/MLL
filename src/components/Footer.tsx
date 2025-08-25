@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="mb-4 md:mb-6">
               <img src={mllLogo} alt="MLL Services Inc." className="h-20 w-auto invert" />
               <p className="text-gray-600 text-xs md:text-sm font-light leading-relaxed mt-2">
-                Your Partner in Staffing Success.
+                Empowering Your Business With Strategic Staffing.
               </p>
             </div>
             
